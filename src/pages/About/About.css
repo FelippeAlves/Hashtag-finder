@@ -5,7 +5,8 @@
 
 .aboutContainer {
   display: grid;
-  grid-template-rows: 280px auto auto auto;
+  grid-template-rows: 280px 1fr 1fr 1fr;
+  height: 100vh;
 }
 
 .projectHeaderContainer {
