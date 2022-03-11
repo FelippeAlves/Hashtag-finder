@@ -24,3 +24,8 @@
 .socialMediaImage {
   height: 16px;
 }
+
+.personDescriptionText {
+  font-size: 12px;
+  text-align: center;
+}

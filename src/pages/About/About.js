@@ -40,7 +40,9 @@ export default class About extends Component {
                     </div>
 
                 </div>
-                <div>footer</div>
+                <footer className="footer">
+                    <p>@Cocreare 2020. Todos os direitos reservados.</p>
+                </footer>
             </div>
         );
     }
