@@ -1,0 +1,71 @@
+* {
+  margin: 0px;
+  font-family: "Rubik", sans-serif;
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-rows: 280px auto auto auto;
+}
+
+.projectHeaderContainer {
+  background-image: url("../../../public/about-bg.jpg");
+  height: 100%;
+}
+
+.aboutProjectText {
+  margin-top: 8%;
+  margin-left: 5%;
+  color: #ffffff;
+  font: normal normal bold 82px/90px Rubik;
+  letter-spacing: 0px;
+  font-size: 56px;
+}
+
+.whatIsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.whatIsInfo {
+  display: grid;
+  grid-template-rows: 48px 378px;
+  padding-right: 100px;
+}
+
+.whatIsTitle {
+  letter-spacing: 0px;
+  color: #3634f7;
+}
+
+.whatIsText {
+  line-height: 1.5rem;
+  text-align: left;
+  letter-spacing: 0px;
+}
+
+.whatIsImageContainer {
+  padding-right: 48px;
+  height: 100%;
+}
+
+.whatIsImage {
+  height: 90%;
+  max-width: 100%;
+}
+
+.aboutUsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-top: 5%;
+  gap: 48px;
+}
+
+.peopleContainer {
+  display: flex;
+  height: 275px;
+  gap: 72px;
+}

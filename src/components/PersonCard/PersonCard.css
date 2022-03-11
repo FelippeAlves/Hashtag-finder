@@ -1,0 +1,26 @@
+.personInfoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+  box-shadow: 0px 5px 10px #5538ee14;
+  border: 1px solid #5538ee24;
+  border-radius: 10px;
+  padding: 16px;
+  gap: 16px;
+}
+
+.personInfoImage {
+  border-radius: 50%;
+  height: 35%;
+}
+
+.socialMediaContainer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.socialMediaImage {
+  height: 16px;
+}
