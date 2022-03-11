@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3vh 2vw;
+}
+
+.sloganContainer {
+  display: flex;
+  font: normal normal normal 22px/27px Rubik;
+  color: #fff;
+}
+
+.sloganFinder {
+  font-weight: bold;
+}
+
+.btnContainer {
+  width: 13.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnAbout {
+  background-color: #d842bd;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  width: 115px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 6px #5538ee29;
+  border-radius: 25px;
+}
+
+.icons {
+  width: 12px;
+}
+
+.btnLetter {
+  margin-left: 15px;
+  font: normal normal bold 11px Rubik;
+  letter-spacing: 2px;
+}
+
+.btnLogin {
+  background-color: #3633f7;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  width: 115px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 6px #5538ee29;
+  border-radius: 25px;
+}
+
+@media (max-width: 1900px) {
+  .container {
+    padding: 5vh 2vw;
+  }
+
+  .btnContainer {
+    width: 21.5vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 4vh 3vw;
+  }
+
+  .btnContainer {
+    width: 25.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2vh 4vw;
+  }
+
+  .btnContainer {
+    width: 33.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 3vh 4vw;
+  }
+
+  .btnContainer {
+    width: 50.5vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 5vh 2vw;
+  }
+
+  .sloganContainer {
+    font: normal normal normal 14px/27px Rubik;
+  }
+
+  .btnLetter {
+    margin-left: 10px;
+    font: normal normal bold 8px Rubik;
+    letter-spacing: 2px;
+  }
+
+  .btnContainer {
+    width: 53vw;
+  }
+
+  .btnAbout {
+    width: 80px;
+    height: 25px;
+  }
+
+  .btnLogin {
+    width: 80px;
+    height: 25px;
+  }
+
+  .icons {
+    width: 10px;
+  }
+}

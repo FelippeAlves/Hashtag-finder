@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.headerContainer {
+  background: url("../../assets/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: -13vh;
+}
+
+.titleContainer {
+  font: normal normal normal 42px/90px Rubik;
+  color: #fff;
+  width: 45vw;
+  margin: 12vh 0 2vh 5.6vw;
+}
+
+.subTitleContainer {
+  font: normal normal normal 26px/32px Rubik;
+  color: #fff;
+  margin: 0 0 2vh 5.6vw;
+  padding-bottom: 17vh;
+  width: 30vw;
+}
+
+@media (max-width: 1900px) {
+  .titleContainer {
+    font: normal normal normal 27px/62px Rubik;
+    width: 49vw;
+  }
+
+  .subTitleContainer {
+    font: normal normal normal 18px/22px Rubik;
+  }
+}
+
+@media (max-width: 1024px) {
+  .titleContainer {
+    font: normal normal normal 24px/52px Rubik;
+    width: 49vw;
+  }
+
+  .subTitleContainer {
+    font: normal normal normal 16px/19px Rubik;
+  }
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    font: normal normal normal 18px/37px Rubik;
+    width: 49vw;
+    margin: 2vh 0 1vh 5.6vw;
+  }
+
+  .subTitleContainer {
+    font: normal normal normal 14px/19px Rubik;
+    width: 40vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    background: url("../../assets/hero-bg-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+  }
+
+  .titleContainer {
+    font: normal normal normal 22px/42px Rubik;
+    width: 90vw;
+    margin: 12vh 0 2vh 5.6vw;
+  }
+
+  .subTitleContainer {
+    font: normal normal normal 18px/25px Rubik;
+    width: 81vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .headerContainer {
+    background: url("../../assets/hero-bg-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+  }
+
+  .titleContainer {
+    font: normal normal normal 14px/30px Rubik;
+    width: 90vw;
+    margin: 1vh 0 2vh 5.6vw;
+  }
+
+  .subTitleContainer {
+    font: normal normal normal 13px/17px Rubik;
+    width: 81vw;
+  }
+}

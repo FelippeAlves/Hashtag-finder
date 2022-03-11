@@ -1,0 +1,120 @@
+.searchContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.iconSearch {
+  margin-left: 1.5vw;
+  width: 2%;
+}
+
+.buttonSearch {
+  background-color: #fff;
+  width: 52vw;
+  box-shadow: 8px 14px 30px #5538ee29;
+  border-radius: 72px;
+  height: 70px;
+  align-items: center;
+  display: flex;
+  margin-top: -6vh;
+}
+
+.buttonSearch img {
+  opacity: 0.6;
+}
+
+.inputSearch {
+  width: 90%;
+  margin: 0 0 0 1.5vw;
+  font: normal normal normal 25px Rubik;
+  height: 50%;
+  border: 0;
+  outline: 0;
+}
+
+input::placeholder {
+  color: #8d9da2;
+  font: normal normal normal 25px Rubik;
+  opacity: 0.31;
+}
+
+@media (max-width: 1200px) {
+  .iconSearch {
+    margin-left: 3.5vw;
+    width: 4%;
+  }
+
+  .inputSearch {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .iconSearch {
+    margin-left: 3.5vw;
+    width: 4%;
+  }
+
+  .inputSearch {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttonSearch {
+    margin-top: -14vh;
+  }
+
+  .iconSearch {
+    margin-left: 3.5vw;
+    width: 4%;
+  }
+
+  .inputSearch {
+    width: 70%;
+  }
+}
+
+@media (max-width: 488px) {
+  .buttonSearch {
+    margin-top: -38vh;
+  }
+
+  .buttonSearch {
+    width: 85vw;
+    height: 54px;
+  }
+
+  .inputSearch {
+    font: normal normal normal 22px Rubik;
+  }
+
+  input::placeholder {
+    color: #8d9da2;
+    font: normal normal normal 22px Rubik;
+    opacity: 0.31;
+  }
+
+  .iconSearch {
+    margin-left: 3.5vw;
+    width: 4%;
+  }
+}
+
+@media (max-width: 380px) {
+  .buttonSearch {
+    width: 85vw;
+    height: 40px;
+  }
+
+  input::placeholder {
+    color: #8d9da2;
+    font: normal normal normal 22px Rubik;
+    opacity: 0.31;
+  }
+
+  .iconSearch {
+    margin-left: 4.5vw;
+    width: 5%;
+  }
+}
