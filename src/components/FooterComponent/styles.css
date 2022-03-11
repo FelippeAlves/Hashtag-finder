@@ -1,0 +1,12 @@
+.footerContainer {
+  background-color: #d842bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  color: #fff;
+  font: normal normal normal 20px/19px Rubik;
+  position: absolute;
+  bottom: 0;
+}
