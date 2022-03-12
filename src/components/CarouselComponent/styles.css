@@ -1,0 +1,58 @@
+.card {
+  width: 287px;
+  height: 287px;
+  background-color: #333;
+  margin: 20px;
+  display: flex;
+  box-shadow: 0px 9px 27px #5538ee29;
+  border-radius: 21px;
+  color: #fff;
+}
+
+.content {
+  align-self: end;
+  margin: 20px;
+}
+
+#postTitle {
+  font: 17px/19px Rubik;
+}
+
+#userPost {
+  font: 21px/23px Rubik;
+}
+
+.username {
+  width: 100%;
+  word-break: break-all;
+}
+
+.titleCarousel {
+  display: flex;
+  justify-content: center;
+  font: normal normal bold 32px/35px Rubik;
+  margin-top: 17vh;
+  color: #3634f7;
+  text-align: center;
+  width: 100%;
+}
+
+.carouselContainer {
+  margin: 8vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+.qoLPS {
+  width: 75% !important;
+}
+
+.lcUbOd {
+  box-shadow: none !important;
+  background-color: #3634f7 !important;
+}
+
+.eaptOe {
+  background-color: #cbcbcb !important;
+  box-shadow: none !important;
+}
