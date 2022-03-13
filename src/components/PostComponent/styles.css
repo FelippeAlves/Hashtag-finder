@@ -1,0 +1,58 @@
+.mainContainer {
+  margin: 15vh 0vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex: 0 1 auto;
+}
+
+.cardContainer {
+  display: flex;
+  border: 1px solid #5538ee24;
+  padding: 3vh 2vw;
+  max-width: 530px;
+  box-shadow: 5px 8px 10px #5538ee14;
+  border-radius: 15px;
+  margin: 3vh 3vw;
+}
+
+.imgPerson {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+}
+
+.imageContainer {
+  margin-right: 1vw;
+}
+
+.description {
+  display: flex;
+  margin-bottom: 0.4vh;
+  align-items: center;
+}
+
+.comment {
+  margin-bottom: 3vh;
+  font: normal normal normal 15px/25px Rubik;
+}
+
+.buttonSeeMore {
+  border: 0;
+  background-color: transparent;
+  color: #3634f7;
+  font: 16px/22px Rubik;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#namePerson {
+  color: #292929;
+  font: normal normal bold 20px/30px Rubik;
+  margin-right: 0.6vw;
+}
+
+#userPerson {
+  font: normal normal normal 14px/22px Rubik;
+  color: #292929;
+}
