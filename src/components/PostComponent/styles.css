@@ -10,10 +10,10 @@
   display: flex;
   border: 1px solid #5538ee24;
   padding: 3vh 2vw;
-  max-width: 530px;
+  max-width: 700px;
   box-shadow: 5px 8px 10px #5538ee14;
   border-radius: 15px;
-  margin: 3vh 3vw;
+  margin: 3vh 0;
 }
 
 .imgPerson {
@@ -55,4 +55,89 @@
 #userPerson {
   font: normal normal normal 14px/22px Rubik;
   color: #292929;
+}
+
+@media (max-width: 1900px) {
+  .cardContainer {
+    max-width: 39vw;
+  }
+}
+
+@media (max-width: 991px) {
+  .cardContainer {
+    max-width: 80vw;
+  }
+
+  .imageContainer {
+    margin-right: 2vw;
+  }
+}
+
+@media (max-width: 810px) {
+  .cardContainer {
+    max-width: 80vw;
+  }
+
+  .imgPerson {
+    width: 60px;
+    height: 60px;
+  }
+
+  .imageContainer {
+    margin-right: 2vw;
+  }
+}
+
+@media (max-width: 770px) {
+  .cardContainer {
+    max-width: 80vw;
+  }
+
+  .imgPerson {
+    width: 50px;
+    height: 50px;
+  }
+
+  #namePerson {
+    font: normal normal bold 15px/30px Rubik;
+  }
+
+  #userPerson {
+    font: normal normal normal 12px/22px Rubik;
+  }
+
+  .comment {
+    font: normal normal normal 13px/25px Rubik;
+  }
+
+  .buttonSeeMore {
+    font: 14px/22px Rubik;
+  }
+}
+
+@media (max-width: 675px) {
+  .cardContainer {
+    max-width: 80vw;
+  }
+
+  .imgPerson {
+    width: 50px;
+    height: 50px;
+  }
+
+  #namePerson {
+    font: normal normal bold 15px/30px Rubik;
+  }
+
+  #userPerson {
+    font: normal normal normal 12px/22px Rubik;
+  }
+
+  .comment {
+    font: normal normal normal 13px/25px Rubik;
+  }
+
+  .buttonSeeMore {
+    font: 14px/22px Rubik;
+  }
 }
