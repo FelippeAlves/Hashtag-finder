@@ -4,6 +4,7 @@ import bgIllustration from './/assets/about-illustration.svg';
 import thauImage from './/assets/thau.jpg';
 import felippeImage from './/assets/felippe.jpg';
 import alekissImage from './/assets/alekiss.jpg';
+import pedroImage from './/assets/pedro.jpg';
 import PersonCard from '../../components/PersonCard/PersonCard';
 import FooterComponent from '../../components/FooterComponent/index';
 import HeaderButtons from '../../components/HeaderButtons/index';
@@ -50,12 +51,11 @@ export default class About extends Component {
                                                             personLinkedin="https://www.linkedin.com/in/alekissmelo/"
                                                             personGithub="https://github.com/alekiss"
                                                             personDescription="Desenvolvedor Frontend na Zappts"/>
-                        <PersonCard personImage={thauImage} personName="Thauany Moedano"
-                                                            personEmail="thauany.moedano@zappts.com.br"
-                                                            personLinkedin="https://www.linkedin.com/in/tmoedano/"
-                                                            personGithub="https://github.com/t-moedano"
-                                                            personDescription="Head de Desenvolvimento, Thauany tem 5 anos de 
-                                                                                experiência e programação e está aprendendo React"/>
+                        <PersonCard personImage={pedroImage} personName="Pedro Lima"
+                                                            personEmail="phlimas@outlook.com"
+                                                            personLinkedin="https://www.linkedin.com/in/pedro-lima-b2a2b81a7/"
+                                                            personGithub=" https://github.com/PedroLimass"
+                                                            personDescription="Estudando de engenharia de software e desenvolvedor frontend"/>
                     </div>
 
                 </div>
