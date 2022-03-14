@@ -7,6 +7,11 @@
   height: 130px;
   color: #fff;
   font: normal normal normal 20px/19px Rubik;
-  position: absolute;
-  bottom: 0;
+}
+
+@media (max-width: 611px) {
+  .footerContainer {
+    font-size: 16px;
+    text-align: center;
+  }
 }
