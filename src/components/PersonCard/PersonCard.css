@@ -12,7 +12,9 @@
 
 .personInfoImage {
   border-radius: 50%;
-  height: 35%;
+  height: 10vw;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 .socialMediaContainer {
@@ -28,4 +30,14 @@
 .personDescriptionText {
   font-size: 12px;
   text-align: center;
+}
+
+@media (max-width: 611px) {
+  .personInfoContainer {
+    height: 260px;
+  }
+
+  .personInfoImage {
+    height: 100px;
+  }
 }

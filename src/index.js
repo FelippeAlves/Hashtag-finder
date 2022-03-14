@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HeaderComponent from './components/HeaderComponent'
-import FooterComponent from './components/FooterComponent'
+import About from './pages/About/About'
 
 ReactDOM.render(
   <React.StrictMode>
-    <HeaderComponent />
-    <FooterComponent />
+    <About />
   </React.StrictMode>,
   document.getElementById('root')
 );

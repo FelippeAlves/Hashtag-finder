@@ -3,10 +3,13 @@
   font-family: "Rubik", sans-serif;
 }
 
+body {
+  height: 100vh;
+}
+
 .aboutContainer {
   display: grid;
-  grid-template-rows: 280px 1fr 1fr 1fr;
-  height: 100vh;
+  grid-template-rows: 280px auto auto 130px;
 }
 
 .projectHeaderContainer {
@@ -15,7 +18,7 @@
 }
 
 .aboutProjectText {
-  margin-top: 8%;
+  margin-top: 5%;
   margin-left: 5%;
   color: #ffffff;
   font: normal normal bold 82px/90px Rubik;
@@ -32,7 +35,7 @@
 
 .whatIsInfo {
   display: grid;
-  grid-template-rows: 48px 378px;
+  grid-template-rows: 48px auto;
   padding-right: 100px;
 }
 
@@ -42,14 +45,21 @@
 }
 
 .whatIsText {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
   line-height: 1.5rem;
-  text-align: left;
   letter-spacing: 0px;
+  text-align: justify;
 }
 
 .whatIsImageContainer {
-  padding-right: 48px;
   height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
 .whatIsImage {
@@ -60,16 +70,14 @@
 .aboutUsContainer {
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
-  margin-top: 5%;
+  margin: 5vh 5vw;
   gap: 48px;
 }
 
 .peopleContainer {
-  display: flex;
-
-  height: 275px;
-  gap: 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5vw;
 }
 
 .footer {
@@ -80,4 +88,86 @@
   padding: 50px;
   color: #ffffff;
   font-size: 16px;
+  position: initial;
+  bottom: auto;
+}
+
+@media (max-width: 1024px) and (min-width: 612px) {
+  .whatIsContainer {
+    grid-template-columns: 1fr;
+    width: calc(95vw - 32px);
+    padding: 25px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .peopleContainer {
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .whatIsInfo {
+    display: grid;
+    grid-template-rows: 48px auto;
+    padding-right: 15px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 611px) {
+  .whatIsContainer {
+    grid-template-columns: 1fr;
+    width: calc(95vw - 32px);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .peopleContainer {
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .whatIsInfo {
+    display: grid;
+    grid-template-rows: 48px auto;
+    padding-right: 15px;
+    padding-bottom: 30px;
+  }
+
+  .aboutContainer {
+    display: grid;
+    grid-template-rows: 200px auto auto 130px;
+  }
+
+  .peopleContainer {
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .aboutProjectText {
+    margin-top: 5%;
+    margin-left: 5%;
+    color: #ffffff;
+    font: normal normal bold 82px/90px Rubik;
+    letter-spacing: 0px;
+    font-size: 36px;
+    text-align: center;
+  }
 }
