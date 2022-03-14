@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './About.css';
 import bgIllustration from './/assets/about-illustration.svg';
 import thauImage from './/assets/thau.jpg';
+import felippeImage from './/assets/felippe.jpg';
+import alekissImage from './/assets/alekiss.jpg';
 import PersonCard from '../../components/PersonCard/PersonCard';
 import FooterComponent from '../../components/FooterComponent/index';
 import HeaderButtons from '../../components/HeaderButtons/index';
@@ -32,14 +34,28 @@ export default class About extends Component {
                 <div className="aboutUsContainer">
                     <h2 className="whatIsTitle">Quem Somos</h2>
                     <div className="peopleContainer"> 
-                        <PersonCard personImage={thauImage} personName="Thauany Moedano" personDescription="Head de Desenvolvimento, Thauany tem 5 anos de 
-                                                                                                        experiência e programação e está aprendendo React"/>
-                        <PersonCard personImage={thauImage} personName="Thauany Moedano" personDescription="Head de Desenvolvimento, Thauany tem 5 anos de 
-                                                                                                        experiência e programação e está aprendendo React"/>
-                        <PersonCard personImage={thauImage} personName="Thauany Moedano" personDescription="Head de Desenvolvimento, Thauany tem 5 anos de 
-                                                                                                        experiência e programação e está aprendendo React"/>
-                        <PersonCard personImage={thauImage} personName="Thauany Moedano" personDescription="Head de Desenvolvimento, Thauany tem 5 anos de 
-                                                                                                        experiência e programação e está aprendendo React"/>
+                        <PersonCard personImage={thauImage} personName="Thauany Moedano"
+                                                            personEmail="thauany.moedano@zappts.com.br"
+                                                            personLinkedin="https://www.linkedin.com/in/tmoedano/"
+                                                            personGithub="https://github.com/t-moedano"
+                                                            personDescription="Head de Desenvolvimento, Thauany tem 5 anos de 
+                                                                                experiência e programação e está aprendendo React"/>
+                        <PersonCard personImage={felippeImage} personName="Felipe Alves"
+                                                            personEmail="felippe.paula@zappts.com.br"
+                                                            personLinkedin="https://www.linkedin.com/in/felippe-alves-de-paula/"
+                                                            personGithub="https://github.com/FelippeAlves/"
+                                                            personDescription="Estudando de ADS e desenvolvedor frontend"/>
+                        <PersonCard personImage={alekissImage} personName="Álekiss Melo"
+                                                            personEmail="alekiss.melo@dcx.ufpb.br"
+                                                            personLinkedin="https://www.linkedin.com/in/alekissmelo/"
+                                                            personGithub="https://github.com/alekiss"
+                                                            personDescription="Desenvolvedor Frontend na Zappts"/>
+                        <PersonCard personImage={thauImage} personName="Thauany Moedano"
+                                                            personEmail="thauany.moedano@zappts.com.br"
+                                                            personLinkedin="https://www.linkedin.com/in/tmoedano/"
+                                                            personGithub="https://github.com/t-moedano"
+                                                            personDescription="Head de Desenvolvimento, Thauany tem 5 anos de 
+                                                                                experiência e programação e está aprendendo React"/>
                     </div>
 
                 </div>
