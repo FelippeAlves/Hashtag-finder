@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.searchListingContainer {
+  background-image: url(../../assets/login-bg.jpg);
+  height: 1024px;
+  font: normal normal normal 20px/74px Rubik;
+}
+
+h2 {
+  margin-left: 10%;
+  color: #fff;
+}
+
+table {
+  margin-left: 10%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 80%;
+  border-radius: 14px;
+}
+
+thead {
+  background-color: #f1f1f1;
+}
+
+tbody {
+  background-color: #fff;
+}
+
+th {
+  color: #3633F7;
+  font-size: 1.25rem;
+}
+
+.td1 {
+  color: #292929;
+}
+
+td {
+  color: #D842BD;
+}
+
+th, td {
+  text-align: center
+}
