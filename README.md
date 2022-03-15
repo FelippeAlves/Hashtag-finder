@@ -1,71 +1,62 @@
-# Getting Started with Create React App
+# Hashtag Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application developed with React
 
-## Available Scripts
+## Integrantes :bust_in_silhouette:
 
-In the project directory, you can run:
+Álekiss Melo [LinkedIn](https://www.linkedin.com/in/alekissmelo/) / [Github](https://github.com/alekiss/);
+Felippe Alves [LinkedIn](https://www.linkedin.com/in/felippe-alves-de-paula/) / [Github](https://github.com/FelippeAlves/);
+Pedro Lima [LinkedIn](https://www.linkedin.com/in/pedro-lima-b2a2b81a7/) / [Github](https://github.com/PedroLimass);
+Thauany Moedano [LinkedIn](https://www.linkedin.com/in/tmoedano/) / [Github](https://github.com/t-moedano);
 
-### `npm start`
+## Objetivos :dart:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Este projeto tem como objetivo apresentar os conhecimentos adquiridos e desenvolver em equipe a criação de uma aplicação WEB baseada na ferramenta citata acima. Este projeto será avaliado e acompanhado pela equipe da Newtab Academy.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Introdução :pencil:
 
-### `npm test`
+Este projeto tem por objetivo trazer resultados de uma busca feita por uma API do Twitter.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Twitter é uma plataforma semelhante a um blog, porque permite atualizações constantes e frequentes: os usuários podem enviar mensagens contendo até 140, e estas podem conter imagens e links. O Twitter é uma rede social poderosa exatamente porque se propõe a ser um jeito rápido e fácil de disseminar informação.
 
-### `npm run build`
+Desta maneira, este projeto irá apresentar formas de capturar as informações, retê-las e utilizá-las de forma mais simples e rápida. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O projeto apresentará um aplicativo WEB, acessível por computadores, tablets e mobile, que seja possível o login de usuário, busca por "hashtags" no twitter, histórico de buscas e segurança de visualização das buscas por meio de barreira.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Conforme cronograma, os objetivos serão segregados por nível de importância, sendo em cada uma de suas entregas, validadas pela equipe da Newtab Academy.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tecnologias utilizadas :computer:
 
-### `npm run eject`
+- React;
+- CSS;
+- Styled-Component;
+- React Router DOM;
+- React Elastic;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Entregas :white_check_mark:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Front-end 15/03:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[Versão estática] Topo, rodapé e área para busca
+[Versão estática] Lista de imagens e posts dos resultados
+[Versão estática] Sobre o projeto
+[Versão estática] Login
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Rodando o Projeto
 
-## Learn More
+### Pré-requisitos:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [NPM]. (https://nodejs.org/en/download/)
+- Conhecimentos básicos em React.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Instale o gerenciador de pacodes NPM.
+- Clone o repositório.
+- Na raiz da pasta, abra um terminal ou cmd e utilize o comando `npm install` que ira instalar todas as dependências;
+- Para rodar o projeto utilize o comando `npm start`.
+- Acesse o projeto em `http://localhost:3000`
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
