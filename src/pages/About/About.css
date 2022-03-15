@@ -1,0 +1,173 @@
+* {
+  margin: 0px;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-rows: 280px auto auto 130px;
+}
+
+.projectHeaderContainer {
+  background-image: url("../../../public/about-bg.jpg");
+  height: 100%;
+}
+
+.aboutProjectText {
+  margin-top: 5%;
+  margin-left: 5%;
+  color: #ffffff;
+  font: normal normal bold 82px/90px Rubik;
+  letter-spacing: 0px;
+  font-size: 56px;
+}
+
+.whatIsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.whatIsInfo {
+  display: grid;
+  grid-template-rows: 48px auto;
+  padding-right: 100px;
+}
+
+.whatIsTitle {
+  letter-spacing: 0px;
+  color: #3634f7;
+}
+
+.whatIsText {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
+  text-align: justify;
+}
+
+.whatIsImageContainer {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.whatIsImage {
+  height: 90%;
+  max-width: 100%;
+}
+
+.aboutUsContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh 5vw;
+  gap: 48px;
+}
+
+.peopleContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5vw;
+}
+
+.footer {
+  height: 100%;
+  margin-top: 72px;
+  background: #d842bd 0% 0% no-repeat padding-box;
+  text-align: center;
+  padding: 50px;
+  color: #ffffff;
+  font-size: 16px;
+  position: initial;
+  bottom: auto;
+}
+
+@media (max-width: 1024px) and (min-width: 612px) {
+  .whatIsContainer {
+    grid-template-columns: 1fr;
+    width: calc(95vw - 32px);
+    padding: 25px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .peopleContainer {
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .whatIsInfo {
+    display: grid;
+    grid-template-rows: 48px auto;
+    padding-right: 15px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 611px) {
+  .whatIsContainer {
+    grid-template-columns: 1fr;
+    width: calc(95vw - 32px);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .peopleContainer {
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .whatIsInfo {
+    display: grid;
+    grid-template-rows: 48px auto;
+    padding-right: 15px;
+    padding-bottom: 30px;
+  }
+
+  .aboutContainer {
+    display: grid;
+    grid-template-rows: 200px auto auto 130px;
+  }
+
+  .peopleContainer {
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .aboutProjectText {
+    margin-top: 5%;
+    margin-left: 5%;
+    color: #ffffff;
+    font: normal normal bold 82px/90px Rubik;
+    letter-spacing: 0px;
+    font-size: 36px;
+    text-align: center;
+  }
+}
