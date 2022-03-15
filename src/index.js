@@ -1,20 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import About from './pages/About/About'
-import HomePage from './pages/HomePage/HomePage';
-import { 
-  BrowserRouter as Router,
-  Route,
-  Routes, 
-} from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom";
+import About from "./pages/About/About";
+import HomePage from "./pages/HomePage/HomePage";
+import Login from "./pages/Login/Login";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/" exact element={<HomePage />} />
       <Route path="/sobre" exact element={<About />} />
+      <Route path="/login" exact element={<Login />} />
     </Routes>
   </Router>,
-  document.getElementById('root')
-);
 
+  document.getElementById("root")
+);
