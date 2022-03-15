@@ -4,10 +4,10 @@ Application developed with React
 
 ## Integrantes :bust_in_silhouette:
 
-Álekiss Melo [LinkedIn](https://www.linkedin.com/in/alekissmelo/) / [Github](https://github.com/alekiss/);
-Felippe Alves [LinkedIn](https://www.linkedin.com/in/felippe-alves-de-paula/) / [Github](https://github.com/FelippeAlves/);
-Pedro Lima [LinkedIn](https://www.linkedin.com/in/pedro-lima-b2a2b81a7/) / [Github](https://github.com/PedroLimass);
-Thauany Moedano [LinkedIn](https://www.linkedin.com/in/tmoedano/) / [Github](https://github.com/t-moedano);
+- Álekiss Melo [LinkedIn](https://www.linkedin.com/in/alekissmelo/) / [Github](https://github.com/alekiss/);
+- Felippe Alves [LinkedIn](https://www.linkedin.com/in/felippe-alves-de-paula/) / [Github](https://github.com/FelippeAlves/);
+- Pedro Lima [LinkedIn](https://www.linkedin.com/in/pedro-lima-b2a2b81a7/) / [Github](https://github.com/PedroLimass);
+- Thauany Moedano [LinkedIn](https://www.linkedin.com/in/tmoedano/) / [Github](https://github.com/t-moedano);
 
 ## Objetivos :dart:
 
