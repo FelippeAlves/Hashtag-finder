@@ -37,10 +37,10 @@ Conforme cronograma, os objetivos serão segregados por nível de importância, 
 
 ### Front-end 15/03:
 
-[Versão estática] Topo, rodapé e área para busca
-[Versão estática] Lista de imagens e posts dos resultados
-[Versão estática] Sobre o projeto
-[Versão estática] Login
+- [Versão estática] Topo, rodapé e área para busca
+- [Versão estática] Lista de imagens e posts dos resultados
+- [Versão estática] Sobre o projeto
+- [Versão estática] Login
 
 ## Rodando o Projeto
 
@@ -49,11 +49,11 @@ Conforme cronograma, os objetivos serão segregados por nível de importância, 
 - [NPM]. (https://nodejs.org/en/download/)
 - Conhecimentos básicos em React.
 
-- Instale o gerenciador de pacodes NPM.
-- Clone o repositório.
-- Na raiz da pasta, abra um terminal ou cmd e utilize o comando `npm install` que ira instalar todas as dependências;
-- Para rodar o projeto utilize o comando `npm start`.
-- Acesse o projeto em `http://localhost:3000`
+  - Instale o gerenciador de pacodes NPM.
+  - Clone o repositório.
+  - Na raiz da pasta, abra um terminal ou cmd e utilize o comando `npm install` que ira instalar todas as dependências;
+  - Para rodar o projeto utilize o comando `npm start`.
+  - Acesse o projeto em `http://localhost:3000`
 
 
 
