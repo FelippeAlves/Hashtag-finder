@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Hashtag-finder/static/css/main.1315aa36.css",
+    "main.js": "/Hashtag-finder/static/js/main.0c2c060c.js",
+    "static/media/hero-bg.jpg": "/Hashtag-finder/static/media/hero-bg.bb884368f088f73ec617.jpg",
+    "static/media/login-bg.jpg": "/Hashtag-finder/static/media/login-bg.f2411a575614d48f2c00.jpg",
+    "static/media/pedro.jpg": "/Hashtag-finder/static/media/pedro.2ac6f84a451ae4231dfa.jpg",
+    "static/media/alekiss.jpg": "/Hashtag-finder/static/media/alekiss.b32e6c165539e057bc34.jpg",
+    "static/media/about-bg.jpg": "/Hashtag-finder/static/media/about-bg.27d21cb16cc30bf98cae.jpg",
+    "static/media/hero-bg-mobile.jpg": "/Hashtag-finder/static/media/hero-bg-mobile.752f34a4afb70b0093d4.jpg",
+    "static/media/thau.jpg": "/Hashtag-finder/static/media/thau.f4cdcd9d997974f25496.jpg",
+    "static/media/felippe.jpg": "/Hashtag-finder/static/media/felippe.e9977540578850852806.jpg",
+    "static/media/Capturar4.JPG": "/Hashtag-finder/static/media/Capturar4.2345ec57cd7c2a018693.JPG",
+    "static/media/about-illustration.svg": "/Hashtag-finder/static/media/about-illustration.b1365d3486dbe54ac3a416aa79d2ddb5.svg",
+    "static/media/icon-github.svg": "/Hashtag-finder/static/media/icon-github.9939c646523095eb12f77d887117c2f4.svg",
+    "index.html": "/Hashtag-finder/index.html",
+    "static/media/icon-envelope.svg": "/Hashtag-finder/static/media/icon-envelope.552d69e3f10e31a2a2bbaa66ecc58118.svg",
+    "static/media/icon-search.svg": "/Hashtag-finder/static/media/icon-search.57ca223137c119f8f5b6cdf6507e43b3.svg",
+    "static/media/icon-linkedin.svg": "/Hashtag-finder/static/media/icon-linkedin.c0c953a63a2a304bf3c91102582b654c.svg",
+    "static/media/icon-info-circle.svg": "/Hashtag-finder/static/media/icon-info-circle.04710de8deaa23644f205effc16f384a.svg",
+    "static/media/icon-user-alt.svg": "/Hashtag-finder/static/media/icon-user-alt.525f1ff18ffe31aca4fdf0c343a0ff58.svg",
+    "main.1315aa36.css.map": "/Hashtag-finder/static/css/main.1315aa36.css.map",
+    "main.0c2c060c.js.map": "/Hashtag-finder/static/js/main.0c2c060c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1315aa36.css",
+    "static/js/main.0c2c060c.js"
+  ]
+}
