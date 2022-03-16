@@ -25,7 +25,6 @@ function HeaderButtons({ showLoginBtn = true }) {
               </div>
             </Link>
           )}
-          <h1>{showLoginBtn}</h1>
         </nav>
       </div>
     </>
