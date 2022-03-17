@@ -43,16 +43,16 @@
   justify-content: center;
 }
 
-.qoLPS {
-  width: 75% !important;
-}
-
-.lcUbOd {
+.rec .rec-dot_active {
   box-shadow: none !important;
   background-color: #3634f7 !important;
 }
 
-.eaptOe {
-  background-color: #cbcbcb !important;
+.rec .rec-dot {
+  background-color: #cbcbcb;
   box-shadow: none !important;
+}
+
+.rec-carousel-wrapper {
+  width: 75% !important;
 }

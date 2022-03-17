@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage/HomePage';
 import SearchListing from './pages/SearchListing/SearchListing';
 import Login from "./pages/Login/Login";
 import { 
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes, 
 } from 'react-router-dom'
