@@ -56,3 +56,27 @@
 .rec-carousel-wrapper {
   width: 75% !important;
 }
+
+.rec .rec-arrow-left,
+.rec .rec-arrow-left:disabled {
+  margin-right: -65px;
+  z-index: 1;
+}
+
+.rec .rec-arrow-right,
+.rec .rec-arrow-right:disabled {
+  margin-left: -65px;
+  z-index: 1;
+}
+
+@media (max-width: 1617px) {
+  .rec-carousel-wrapper {
+    width: 85% !important;
+  }
+}
+
+@media (max-width: 1428px) {
+  .rec-carousel-wrapper {
+    width: 95% !important;
+  }
+}
