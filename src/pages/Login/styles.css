@@ -5,3 +5,15 @@
   background-size: cover;
   min-height: 100vh;
 }
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .containerLoginScreen {
+    min-height: 130vh;
+  }
+}
+
+@media (max-width: 760px) {
+  .containerLoginScreen {
+    min-height: 130vh;
+  }
+}

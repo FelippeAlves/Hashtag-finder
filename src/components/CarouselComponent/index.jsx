@@ -18,7 +18,7 @@ function CarouselComponent() {
 
     const breakPoints = [
         {
-           width: 1, itemsToShow: 1 
+           width: 1, itemsToShow: 2.2
         },
         {
            width: 500, itemsToShow: 2 
