@@ -9,6 +9,25 @@ import PersonCard from '../../components/PersonCard/PersonCard';
 import FooterComponent from '../../components/FooterComponent/index';
 import HeaderButtons from '../../components/HeaderButtons/index';
 export default class About extends Component {
+
+    state = {
+        about: []
+    }
+
+    async componentDidMount() {
+        const api = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?fields%5B%5D=Sobre&filterByFormula=`+encodeURI(`{Squad} = '1'`);
+        console.log(api);
+        const response = await fetch(api, {
+            method: 'GET',
+            headers: {
+                Authorization: 'Bearer key2CwkHb0CKumjuM',
+                'Content-Type': 'application/json'
+            }});
+        const body = await response.json();
+        this.setState({about: body.records[0].fields.Sobre})
+
+    }
+
     render() {
         return (
             <div className="aboutContainer">
@@ -19,12 +38,9 @@ export default class About extends Component {
                 <div className="whatIsContainer">
                     <div className="whatIsInfo">
                         <h2 className="whatIsTitle">O que é</h2>
-                        <div class="whatIsText">
+                        <div className="whatIsText">
                             <p >
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus 
+                            {this.state.about}
                             </p>
                         </div>
                     </div>
