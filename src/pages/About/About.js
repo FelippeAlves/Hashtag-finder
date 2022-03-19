@@ -11,7 +11,9 @@ import HeaderButtons from '../../components/HeaderButtons/index';
 export default class About extends Component {
 
     state = {
-        about: []
+        about: [],
+        squadInfo: [],
+        isLoaded: false
     }
 
     async componentDidMount() {
@@ -26,6 +28,17 @@ export default class About extends Component {
         const body = await response.json();
         this.setState({about: body.records[0].fields.Sobre})
 
+        const apiSquad = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?&filterByFormula=`+encodeURI(`{Squad} = '1'`);
+        const responseSquad = await fetch(apiSquad, {
+            method: 'GET',
+            headers: {
+                Authorization: 'Bearer key2CwkHb0CKumjuM',
+                'Content-Type': 'application/json'
+            }});
+        const bodySquad = await responseSquad.json();
+        console.log(bodySquad);
+        this.setState({squadInfo: bodySquad.records, isLoaded: true});
+        console.log(this.state.squadInfo[0].fields)
     }
 
     render() {
@@ -51,27 +64,58 @@ export default class About extends Component {
                 <div className="aboutUsContainer">
                     <h2 className="whatIsTitle">Quem Somos</h2>
                     <div className="peopleContainer"> 
-                        <PersonCard personImage={thauImage} personName="Thauany Moedano"
-                                                            personEmail="thauany.moedano@zappts.com.br"
-                                                            personLinkedin="https://www.linkedin.com/in/tmoedano/"
-                                                            personGithub="https://github.com/t-moedano"
-                                                            personDescription="Head de Desenvolvimento, Thauany tem 5 anos de 
-                                                                                experiência e programação e está aprendendo React"/>
-                        <PersonCard personImage={felippeImage} personName="Felipe Alves"
-                                                            personEmail="felippe.paula@zappts.com.br"
-                                                            personLinkedin="https://www.linkedin.com/in/felippe-alves-de-paula/"
-                                                            personGithub="https://github.com/FelippeAlves/"
-                                                            personDescription="Estudando de ADS e desenvolvedor frontend"/>
-                        <PersonCard personImage={alekissImage} personName="Álekiss Melo"
-                                                            personEmail="alekiss.melo@dcx.ufpb.br"
-                                                            personLinkedin="https://www.linkedin.com/in/alekissmelo/"
-                                                            personGithub="https://github.com/alekiss"
-                                                            personDescription="Desenvolvedor Frontend na Zappts"/>
-                        <PersonCard personImage={pedroImage} personName="Pedro Lima"
-                                                            personEmail="phlimas@outlook.com"
-                                                            personLinkedin="https://www.linkedin.com/in/pedro-lima-b2a2b81a7/"
-                                                            personGithub=" https://github.com/PedroLimass"
-                                                            personDescription="Estudando de engenharia de software e desenvolvedor frontend"/>
+
+                        { this.state.isLoaded ? 
+                        
+                        
+                        <PersonCard personImage={this.state.squadInfo[0].fields.Imagem[0].url} personName={this.state.squadInfo[0].fields.Nome}
+                                                            personEmail={this.state.squadInfo[0].fields.Email}
+                                                            personLinkedin={this.state.squadInfo[0].fields.LinkedIn}
+                                                            personGithub={this.state.squadInfo[0].fields.Github}
+                                                            personDescription={this.state.squadInfo[0].fields['Descrição']}/>
+                        
+                        : <div> </div>
+                    
+                        }
+
+                        { this.state.isLoaded ? 
+                        
+                        
+                        <PersonCard personImage={this.state.squadInfo[1].fields.Imagem[0].url} personName={this.state.squadInfo[1].fields.Nome}
+                                                            personEmail={this.state.squadInfo[1].fields.Email}
+                                                            personLinkedin={this.state.squadInfo[1].fields.LinkedIn}
+                                                            personGithub={this.state.squadInfo[1].fields.Github}
+                                                            personDescription={this.state.squadInfo[1].fields['Descrição']}/>
+                        
+                        : <div> </div>
+                    
+                        }
+
+
+
+                        { this.state.isLoaded ? 
+
+                        <PersonCard personImage={this.state.squadInfo[2].fields.Imagem[0].url} personName={this.state.squadInfo[2].fields.Nome}
+                                                            personEmail={this.state.squadInfo[2].fields.Email}
+                                                            personLinkedin={this.state.squadInfo[2].fields.LinkedIn}
+                                                            personGithub={this.state.squadInfo[2].fields.Github}
+                                                            personDescription={this.state.squadInfo[2].fields['Descrição']}/>
+                        
+                        : <div> </div>
+                    
+                        }
+
+                        { this.state.isLoaded ? 
+
+                        <PersonCard personImage={this.state.squadInfo[3].fields.Imagem[0].url} personName={this.state.squadInfo[3].fields.Nome}
+                                                            personEmail={this.state.squadInfo[3].fields.Email}
+                                                            personLinkedin={this.state.squadInfo[3].fields.LinkedIn}
+                                                            personGithub={this.state.squadInfo[3].fields.Github}
+                                                            personDescription={this.state.squadInfo[3].fields['Descrição']}/>
+
+                        : <div> </div>
+
+                        }
                     </div>
 
                 </div>
