@@ -61,10 +61,6 @@ input::placeholder {
 }
 
 @media (max-width: 768px) {
-  .buttonSearch {
-    margin-top: -14vh;
-  }
-
   .iconSearch {
     margin-left: 3.5vw;
     width: 4%;
@@ -76,10 +72,6 @@ input::placeholder {
 }
 
 @media (max-width: 488px) {
-  .buttonSearch {
-    margin-top: -38vh;
-  }
-
   .buttonSearch {
     width: 85vw;
     height: 54px;

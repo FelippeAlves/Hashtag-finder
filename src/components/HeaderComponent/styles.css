@@ -36,31 +36,25 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .titleContainer {
-    font: normal normal normal 24px/52px Rubik;
-    width: 49vw;
-  }
-
-  .subTitleContainer {
-    font: normal normal normal 16px/19px Rubik;
+@media (max-width: 1180px) {
+  .headerContainer {
+    background-position-y: 0;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   .titleContainer {
-    font: normal normal normal 18px/37px Rubik;
+    font: normal normal normal 18px/38px Rubik;
     width: 49vw;
-    margin: 2vh 0 1vh 5.6vw;
+    margin: 7vh 0 1vh 5.6vw;
   }
 
   .subTitleContainer {
-    font: normal normal normal 14px/19px Rubik;
-    width: 40vw;
+    font: normal normal normal 13px/16px Rubik;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   .headerContainer {
     background: url("../../assets/hero-bg-mobile.jpg");
     background-repeat: no-repeat;

@@ -15,7 +15,7 @@ function Header() {
                 <p>Digite o que deseja no campo de buscas e confira os resultados do Twitter abaixo</p>
             </div>
         </header>
-        <SearchButton />
+            <SearchButton />
     </>
 }
 
