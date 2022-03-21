@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './About.css';
 import bgIllustration from './/assets/about-illustration.svg';
-import thauImage from './/assets/thau.jpg';
-import felippeImage from './/assets/felippe.jpg';
-import alekissImage from './/assets/alekiss.jpg';
-import pedroImage from './/assets/pedro.jpg';
 import PersonCard from '../../components/PersonCard/PersonCard';
 import FooterComponent from '../../components/FooterComponent/index';
 import HeaderButtons from '../../components/HeaderButtons/index';
