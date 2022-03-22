@@ -32,7 +32,7 @@ function CarouselComponent() {
     ]
 
     return <>
-        <h1 className="titleCarousel"> Exibindo os 10 resultados mais recentes para # </h1>
+        
         <div className="carouselContainer">
             <Carousel breakPoints={breakPoints}>
                 <Card number="1"/>
