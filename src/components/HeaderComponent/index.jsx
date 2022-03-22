@@ -2,7 +2,8 @@ import React from "react";
 import './styles.css';
 import HeaderButtons from "../HeaderButtons/index"
 import SearchButton from "../SearchButton/index"
-
+import searchTweets from "../../service/searchTweets";
+import { FindHashProvider } from "../../providers/findHash"
 
 function Header() {
     return <>
@@ -15,8 +16,13 @@ function Header() {
                 <p>Digite o que deseja no campo de buscas e confira os resultados do Twitter abaixo</p>
             </div>
         </header>
-            <SearchButton />
+        <FindHashProvider>
+            <SearchButton />            
+        </FindHashProvider>
     </>
+
 }
+
+searchTweets();
 
 export default Header;

@@ -14,7 +14,6 @@ export default class About extends Component {
 
     async componentDidMount() {
         const api = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?fields%5B%5D=Sobre&filterByFormula=`+encodeURI(`{Squad} = '1'`);
-        console.log(api);
         const response = await fetch(api, {
             method: 'GET',
             headers: {
@@ -32,9 +31,7 @@ export default class About extends Component {
                 'Content-Type': 'application/json'
             }});
         const bodySquad = await responseSquad.json();
-        console.log(bodySquad);
         this.setState({squadInfo: bodySquad.records, isLoaded: true});
-        console.log(this.state.squadInfo[0].fields)
     }
 
     render() {

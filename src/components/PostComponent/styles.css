@@ -11,6 +11,7 @@
   border: 1px solid #5538ee24;
   padding: 3vh 2vw;
   max-width: 700px;
+  min-width: 700px;
   box-shadow: 5px 8px 10px #5538ee14;
   border-radius: 15px;
   margin: 3vh 0;
@@ -60,12 +61,21 @@
 @media (max-width: 1900px) {
   .cardContainer {
     max-width: 39vw;
+    min-width: 39vw;
+  }
+}
+
+@media (max-width: 1600px) {
+  .cardContainer {
+    max-width: 40vw;
+    min-width: 40vw;
   }
 }
 
 @media (max-width: 991px) {
   .cardContainer {
     max-width: 80vw;
+    min-width: 80vw;
   }
 
   .imageContainer {
