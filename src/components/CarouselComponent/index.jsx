@@ -3,18 +3,18 @@ import './styles.css';
 import Carousel from 'react-elastic-carousel';
 
 
-function CarouselComponent() {
+function CarouselComponent({props}) {   
 
-    const Card = ({ number }) => 
-    <div className="card"> 
-        {/* {number} */}
-        <div className="content">
-            <p id="postTitle">Postado por:</p>
-            <div className="username">
-                <p id="userPost">@twitterusername</p> 
-            </div> 
+    const card = props.images.map((images) => 
+        <div className="card" style={{backgroundImage: `url(${images.url ? images.url : images.preview_image_url})`}}>
+             <div className="content">
+                <p id="postTitle"></p>
+                <div className="username">
+                    <p id="userPost"></p> 
+                </div> 
+            </div>
         </div>
-    </div>
+    )    
 
     const breakPoints = [
         {
@@ -32,19 +32,10 @@ function CarouselComponent() {
     ]
 
     return <>
-        <h1 className="titleCarousel"> Exibindo os 10 resultados mais recentes para # </h1>
+        
         <div className="carouselContainer">
             <Carousel breakPoints={breakPoints}>
-                <Card number="1"/>
-                <Card number="2"/>
-                <Card number="3"/>
-                <Card number="4"/>
-                <Card number="5"/>
-                <Card number="6"/>
-                <Card number="7"/>
-                <Card number="8"/>
-                <Card number="9"/>
-                <Card number="10"/>
+                {card}
             </Carousel>
         </div>
        
