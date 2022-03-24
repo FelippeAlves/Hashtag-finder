@@ -1,12 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './styles.css';
 import HeaderButtons from "../HeaderButtons";
-import { useSearchParams } from "react-router-dom";
 
 
 function SearchListingComponent() {
+    const [dataLocal, setDataLocal] = useState([
+        {"fields": {
+            "Squad": "z01",
+            "Hashtag": "jacarei",
+            "Data": 230320222007
+        }}
+    ])
 
-    const [searchParams] = useSearchParams();
+    async function getSearchs() {
+        return await fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?filterByFormula="+encodeURI("({Squad} = 'z01')")+"&maxRecords=100&view=Grid%20view&squad=recScutTnMQeHuKFs", {
+            headers: {
+                Authorization: 'Bearer key2CwkHb0CKumjuM'
+            }
+        }).then(res => res.json());
+    }
+
+    useEffect (() => {
+        getSearchs().then(response => {
+            setDataLocal(response.records)
+        });
+    }, [])
+
+    console.log(dataLocal.fields)
+
+    const item = dataLocal.map((item) => {
+        let correctDate = JSON.stringify(item.fields.Data).slice(0,2) +'/'+ JSON.stringify(item.fields.Data).slice(2,4);
+        let correctHour = JSON.stringify(item.fields.Data).slice(8,10) +':'+ JSON.stringify(item.fields.Data).slice(10,12);
+
+        return <tr>
+                <td className="td1">{item.fields.Hashtag}</td>
+                <td>{correctDate}</td>
+                <td>{correctHour}</td>
+            </tr>
+    }) 
 
     return <>
         <div className="searchListingContainer">
@@ -22,38 +53,9 @@ function SearchListingComponent() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td className="td1">#{searchParams.get('search')}</td>
-                            <td>25/02</td>
-                            <td>09:30</td>
-                        </tr>
-                        <tr>
-                            <td className="td1">#{searchParams.get('search')}</td>
-                            <td>25/02</td>
-                            <td>09:30</td>
-                        </tr>
-                        <tr>
-                            <td className="td1">#{searchParams.get('search')}</td>
-                            <td>25/02</td>
-                            <td>09:30</td>
-                        </tr>
-                        <tr>
-                            <td className="td1">#{searchParams.get('search')}</td>
-                            <td>25/02</td>
-                            <td>09:30</td>
-                        </tr>
-                        <tr>
-                            <td className="td1">#{searchParams.get('search')}</td>
-                            <td>25/02</td>
-                            <td>09:30</td>
-                        </tr>
-                        <tr>
-                            <td className="td1">#{searchParams.get('search')}</td>
-                            <td>25/02</td>
-                            <td>09:30</td>
-                        </tr>
+                        {item}
                     </tbody>
-                </table>
+                </table> 
             </div>
         </div>
     </>

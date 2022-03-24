@@ -16,7 +16,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" exact element={<HomePage />} />
       <Route path="/sobre" exact element={<About />} />
-      <Route path="/search-listing" exact element={<SearchListing/>}/>
+      <Route path="/search-listing" exact element={<SearchListing />}/>
       <Route path="/login" exact element={<Login />} />
     </Routes>
   </Router>,
