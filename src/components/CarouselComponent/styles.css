@@ -81,3 +81,37 @@
     width: 95% !important;
   }
 }
+
+@media (max-width: 480px) {
+  .titleCarousel {
+    font: normal normal bold 26px/28px Rubik;
+    margin-top: 5vh;
+  }
+  .rec .rec-arrow-right {
+    display: none;
+  }
+  .rec .rec-arrow-left {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .card {
+    width: 110px;
+    height: 250px;
+  }
+
+  .rec .rec-arrow-right {
+    display: none;
+  }
+  .rec .rec-arrow-left {
+    display: none;
+  }
+
+  .titleCarousel {
+    font: normal normal bold 17px/18px Rubik;
+    margin-top: 0;
+    color: #3634f7;
+    text-align: center;
+    width: 100%;
+  }
+}
