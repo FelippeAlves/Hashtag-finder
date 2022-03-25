@@ -8,6 +8,17 @@
   width: 2%;
 }
 
+.alert {
+  border: 3px solid red;
+}
+
+.invalidField {
+  justify-content: center;
+  color: red;
+  font-size: 18px;
+  margin-top: 2vh;
+}
+
 .buttonSearch {
   background-color: #fff;
   width: 52vw;

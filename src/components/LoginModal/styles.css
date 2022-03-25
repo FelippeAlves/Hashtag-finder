@@ -30,6 +30,7 @@
   background-color: #3634f7;
   border-radius: 34px;
   align-self: center;
+  cursor: pointer;
 }
 
 .btnSubmit:hover {

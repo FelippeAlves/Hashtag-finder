@@ -1,20 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './styles.css';
 import Carousel from 'react-elastic-carousel';
 
 
-function CarouselComponent() {
+function CarouselComponent({props}) {   
 
-    const Card = ({ number }) => 
-    <div className="card"> 
-        {/* {number} */}
-        <div className="content">
-            <p id="postTitle">Postado por:</p>
-            <div className="username">
-                <p id="userPost">@twitterusername</p> 
-            </div> 
+    const [state, setState] = useState([])
+
+    /* const card = props.images.map((images) => 
+        <div className="card" style={{backgroundImage: `url(${images.url ? images.url : images.preview_image_url})`}}>
+             <div className="content">
+                <p id="postTitle"></p>
+                <div className="username">
+                    <p id="userPost"></p> 
+                </div> 
+            </div>
         </div>
-    </div>
+    ) */
+    const card = state.map((images) => 
+        <div className="card" style={{backgroundImage: `url(${images.url ? images.url : images.preview_image_url})`}}>
+             <div className="content">
+                <p id="postTitle">{images.name}</p>
+                <div className="username">
+                    <p id="userPost">@{images.username}</p> 
+                </div> 
+            </div>
+        </div>
+    )
+    
+    function handlingData() {
+        let array = [];
+        for(let i = 0; i < props.data.length; i++) {
+            let media_key = props.data[i].attachments.media_keys[0];
+            let author_id = props.data[i].author_id
+            let url
+            let author_name
+            let author_username
+            for(let x = 0; x < props.images.length; x++) {
+                if(props.images[x].media_key === media_key){
+                    url = props.images[x].url ? props.images[x].url : props.images[x].preview_image_url 
+                }
+            }
+            for(let y = 0; y < props.author.length; y++) {
+                if(props.author[y].id === author_id){
+                    author_name = props.author[y].name
+                    author_username = props.author[y].username
+                }
+            }
+            array.push({
+                name: author_name,
+                username: author_username,
+                url: url,
+            })
+        }
+        return array;
+    }
+
+    useEffect(() => {
+        if(props.data.length) {
+            let array = handlingData()
+            setState(array); 
+        }
+    },[props])
 
     const breakPoints = [
         {
@@ -35,16 +82,7 @@ function CarouselComponent() {
         
         <div className="carouselContainer">
             <Carousel breakPoints={breakPoints}>
-                <Card number="1"/>
-                <Card number="2"/>
-                <Card number="3"/>
-                <Card number="4"/>
-                <Card number="5"/>
-                <Card number="6"/>
-                <Card number="7"/>
-                <Card number="8"/>
-                <Card number="9"/>
-                <Card number="10"/>
+                {card}
             </Carousel>
         </div>
        
