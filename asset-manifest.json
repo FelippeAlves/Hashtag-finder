@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Hashtag-finder/static/css/main.7bd0ec6a.css",
+    "main.css": "/Hashtag-finder/static/css/main.2154860c.css",
     "main.js": "/Hashtag-finder/static/js/main.d68cacf4.js",
     "static/media/hero-bg.jpg": "/Hashtag-finder/static/media/hero-bg.bb884368f088f73ec617.jpg",
     "static/media/login-bg.jpg": "/Hashtag-finder/static/media/login-bg.f2411a575614d48f2c00.jpg",
@@ -15,11 +15,11 @@
     "static/media/icon-info-circle.svg": "/Hashtag-finder/static/media/icon-info-circle.04710de8deaa23644f205effc16f384a.svg",
     "static/media/icon-power-off.svg": "/Hashtag-finder/static/media/icon-power-off.82d053be5fde578d148deb506cffe4eb.svg",
     "static/media/icon-user-alt.svg": "/Hashtag-finder/static/media/icon-user-alt.525f1ff18ffe31aca4fdf0c343a0ff58.svg",
-    "main.7bd0ec6a.css.map": "/Hashtag-finder/static/css/main.7bd0ec6a.css.map",
+    "main.2154860c.css.map": "/Hashtag-finder/static/css/main.2154860c.css.map",
     "main.d68cacf4.js.map": "/Hashtag-finder/static/js/main.d68cacf4.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bd0ec6a.css",
+    "static/css/main.2154860c.css",
     "static/js/main.d68cacf4.js"
   ]
 }
