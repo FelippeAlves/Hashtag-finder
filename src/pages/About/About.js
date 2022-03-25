@@ -13,7 +13,8 @@ export default class About extends Component {
     }
 
     async componentDidMount() {
-        const api = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?fields%5B%5D=Sobre&filterByFormula=`+encodeURI(`{Squad} = '1'`);
+        const api = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?fields%5B%5D=Sobre&filterByFormula=`+encodeURI(`{Squad} = 'Z01'`);
+        console.log(api);
         const response = await fetch(api, {
             method: 'GET',
             headers: {
@@ -23,7 +24,7 @@ export default class About extends Component {
         const body = await response.json();
         this.setState({about: body.records[0].fields.Sobre})
 
-        const apiSquad = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?&filterByFormula=`+encodeURI(`{Squad} = '1'`);
+        const apiSquad = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?&filterByFormula=`+encodeURI(`{Squad} = 'Z01'`);
         const responseSquad = await fetch(apiSquad, {
             method: 'GET',
             headers: {
@@ -58,57 +59,14 @@ export default class About extends Component {
                     <h2 className="whatIsTitle">Quem Somos</h2>
                     <div className="peopleContainer"> 
 
-                        { this.state.isLoaded ? 
+                        { this.state.isLoaded ? this.state.squadInfo.map((item) =>                         
+                                                            <PersonCard personImage={item.fields.Imagem[0].url} personName={this.state.squadInfo[0].fields.Nome}
+                                                            personEmail={item.fields.Email}
+                                                            personLinkedin={item.fields.LinkedIn}
+                                                            personGithub={item.fields.Github}
+                                                            personDescription={item.fields['Descrição']}/>) : <div></div> }
                         
                         
-                        <PersonCard personImage={this.state.squadInfo[0].fields.Imagem[0].url} personName={this.state.squadInfo[0].fields.Nome}
-                                                            personEmail={this.state.squadInfo[0].fields.Email}
-                                                            personLinkedin={this.state.squadInfo[0].fields.LinkedIn}
-                                                            personGithub={this.state.squadInfo[0].fields.Github}
-                                                            personDescription={this.state.squadInfo[0].fields['Descrição']}/>
-                        
-                        : <div> </div>
-                    
-                        }
-
-                        { this.state.isLoaded ? 
-                        
-                        
-                        <PersonCard personImage={this.state.squadInfo[1].fields.Imagem[0].url} personName={this.state.squadInfo[1].fields.Nome}
-                                                            personEmail={this.state.squadInfo[1].fields.Email}
-                                                            personLinkedin={this.state.squadInfo[1].fields.LinkedIn}
-                                                            personGithub={this.state.squadInfo[1].fields.Github}
-                                                            personDescription={this.state.squadInfo[1].fields['Descrição']}/>
-                        
-                        : <div> </div>
-                    
-                        }
-
-
-
-                        { this.state.isLoaded ? 
-
-                        <PersonCard personImage={this.state.squadInfo[2].fields.Imagem[0].url} personName={this.state.squadInfo[2].fields.Nome}
-                                                            personEmail={this.state.squadInfo[2].fields.Email}
-                                                            personLinkedin={this.state.squadInfo[2].fields.LinkedIn}
-                                                            personGithub={this.state.squadInfo[2].fields.Github}
-                                                            personDescription={this.state.squadInfo[2].fields['Descrição']}/>
-                        
-                        : <div> </div>
-                    
-                        }
-
-                        { this.state.isLoaded ? 
-
-                        <PersonCard personImage={this.state.squadInfo[3].fields.Imagem[0].url} personName={this.state.squadInfo[3].fields.Nome}
-                                                            personEmail={this.state.squadInfo[3].fields.Email}
-                                                            personLinkedin={this.state.squadInfo[3].fields.LinkedIn}
-                                                            personGithub={this.state.squadInfo[3].fields.Github}
-                                                            personDescription={this.state.squadInfo[3].fields['Descrição']}/>
-
-                        : <div> </div>
-
-                        }
                     </div>
 
                 </div>
