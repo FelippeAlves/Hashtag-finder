@@ -13,7 +13,8 @@ export default class About extends Component {
     }
 
     async componentDidMount() {
-        const api = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?fields%5B%5D=Sobre&filterByFormula=`+encodeURI(`{Squad} = '1'`);
+        const api = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?fields%5B%5D=Sobre&filterByFormula=`+encodeURI(`{Squad} = 'Z01'`);
+        console.log(api);
         const response = await fetch(api, {
             method: 'GET',
             headers: {
@@ -23,7 +24,7 @@ export default class About extends Component {
         const body = await response.json();
         this.setState({about: body.records[0].fields.Sobre})
 
-        const apiSquad = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?&filterByFormula=`+encodeURI(`{Squad} = '1'`);
+        const apiSquad = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?&filterByFormula=`+encodeURI(`{Squad} = 'Z01'`);
         const responseSquad = await fetch(apiSquad, {
             method: 'GET',
             headers: {
