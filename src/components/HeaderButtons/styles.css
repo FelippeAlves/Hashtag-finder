@@ -83,9 +83,17 @@ a {
   .container {
     padding: 3vh 4vw;
   }
+
+  .btnContainer {
+    width: 240px;
+  }
 }
 
 @media (max-width: 320px) {
+  .btnContainer {
+    width: 170px;
+  }
+
   .container {
     padding: 5vh 2vw;
   }
