@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Hashtag-finder/static/css/main.71a254a9.css",
-    "main.js": "/Hashtag-finder/static/js/main.9b3bea98.js",
+    "main.css": "/Hashtag-finder/static/css/main.7bd0ec6a.css",
+    "main.js": "/Hashtag-finder/static/js/main.d68cacf4.js",
     "static/media/hero-bg.jpg": "/Hashtag-finder/static/media/hero-bg.bb884368f088f73ec617.jpg",
     "static/media/login-bg.jpg": "/Hashtag-finder/static/media/login-bg.f2411a575614d48f2c00.jpg",
     "static/media/about-bg.jpg": "/Hashtag-finder/static/media/about-bg.27d21cb16cc30bf98cae.jpg",
@@ -13,12 +13,13 @@
     "static/media/icon-search.svg": "/Hashtag-finder/static/media/icon-search.57ca223137c119f8f5b6cdf6507e43b3.svg",
     "static/media/icon-linkedin.svg": "/Hashtag-finder/static/media/icon-linkedin.c0c953a63a2a304bf3c91102582b654c.svg",
     "static/media/icon-info-circle.svg": "/Hashtag-finder/static/media/icon-info-circle.04710de8deaa23644f205effc16f384a.svg",
+    "static/media/icon-power-off.svg": "/Hashtag-finder/static/media/icon-power-off.82d053be5fde578d148deb506cffe4eb.svg",
     "static/media/icon-user-alt.svg": "/Hashtag-finder/static/media/icon-user-alt.525f1ff18ffe31aca4fdf0c343a0ff58.svg",
-    "main.71a254a9.css.map": "/Hashtag-finder/static/css/main.71a254a9.css.map",
-    "main.9b3bea98.js.map": "/Hashtag-finder/static/js/main.9b3bea98.js.map"
+    "main.7bd0ec6a.css.map": "/Hashtag-finder/static/css/main.7bd0ec6a.css.map",
+    "main.d68cacf4.js.map": "/Hashtag-finder/static/js/main.d68cacf4.js.map"
   },
   "entrypoints": [
-    "static/css/main.71a254a9.css",
-    "static/js/main.9b3bea98.js"
+    "static/css/main.7bd0ec6a.css",
+    "static/js/main.d68cacf4.js"
   ]
 }
