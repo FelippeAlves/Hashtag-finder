@@ -32,9 +32,7 @@ export default class About extends Component {
                 'Content-Type': 'application/json'
             }});
         const bodySquad = await responseSquad.json();
-        console.log(bodySquad);
         this.setState({squadInfo: bodySquad.records, isLoaded: true});
-        console.log(this.state.squadInfo[0].fields)
     }
 
     render() {
@@ -61,57 +59,14 @@ export default class About extends Component {
                     <h2 className="whatIsTitle">Quem Somos</h2>
                     <div className="peopleContainer"> 
 
-                        { this.state.isLoaded ? 
+                        { this.state.isLoaded ? this.state.squadInfo.map((item) =>                         
+                                                            <PersonCard personImage={item.fields.Imagem[0].url} personName={this.state.squadInfo[0].fields.Nome}
+                                                            personEmail={item.fields.Email}
+                                                            personLinkedin={item.fields.LinkedIn}
+                                                            personGithub={item.fields.Github}
+                                                            personDescription={item.fields['Descrição']}/>) : <div></div> }
                         
                         
-                        <PersonCard personImage={this.state.squadInfo[0].fields.Imagem[0].url} personName={this.state.squadInfo[0].fields.Nome}
-                                                            personEmail={this.state.squadInfo[0].fields.Email}
-                                                            personLinkedin={this.state.squadInfo[0].fields.LinkedIn}
-                                                            personGithub={this.state.squadInfo[0].fields.Github}
-                                                            personDescription={this.state.squadInfo[0].fields['Descrição']}/>
-                        
-                        : <div> </div>
-                    
-                        }
-
-                        { this.state.isLoaded ? 
-                        
-                        
-                        <PersonCard personImage={this.state.squadInfo[1].fields.Imagem[0].url} personName={this.state.squadInfo[1].fields.Nome}
-                                                            personEmail={this.state.squadInfo[1].fields.Email}
-                                                            personLinkedin={this.state.squadInfo[1].fields.LinkedIn}
-                                                            personGithub={this.state.squadInfo[1].fields.Github}
-                                                            personDescription={this.state.squadInfo[1].fields['Descrição']}/>
-                        
-                        : <div> </div>
-                    
-                        }
-
-
-
-                        { this.state.isLoaded ? 
-
-                        <PersonCard personImage={this.state.squadInfo[2].fields.Imagem[0].url} personName={this.state.squadInfo[2].fields.Nome}
-                                                            personEmail={this.state.squadInfo[2].fields.Email}
-                                                            personLinkedin={this.state.squadInfo[2].fields.LinkedIn}
-                                                            personGithub={this.state.squadInfo[2].fields.Github}
-                                                            personDescription={this.state.squadInfo[2].fields['Descrição']}/>
-                        
-                        : <div> </div>
-                    
-                        }
-
-                        { this.state.isLoaded ? 
-
-                        <PersonCard personImage={this.state.squadInfo[3].fields.Imagem[0].url} personName={this.state.squadInfo[3].fields.Nome}
-                                                            personEmail={this.state.squadInfo[3].fields.Email}
-                                                            personLinkedin={this.state.squadInfo[3].fields.LinkedIn}
-                                                            personGithub={this.state.squadInfo[3].fields.Github}
-                                                            personDescription={this.state.squadInfo[3].fields['Descrição']}/>
-
-                        : <div> </div>
-
-                        }
                     </div>
 
                 </div>
