@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <>
       <div className="containerLoginScreen">
-        <HeaderButtons showLoginBtn={false}/>
+        <HeaderButtons />
         <LoginModal />
       </div>
     </>
