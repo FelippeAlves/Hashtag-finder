@@ -32,6 +32,10 @@
   align-self: center;
 }
 
+.btnSubmit:hover {
+  background-color: #2d2ada;
+}
+
 .inputLogin {
   max-width: 457px;
   width: 100%;
@@ -41,6 +45,7 @@
   border-color: #e9e9f0;
   font-weight: bold;
   padding-left: 7px;
+  margin-bottom: 5px;
 }
 
 .inputLogin::placeholder {
@@ -54,12 +59,16 @@
   border-color: #d842bd;
 }
 
-.inputLogin:first-child {
+#firstInput {
   margin-bottom: 44px;
 }
 
-.inputLogin:last-of-type {
+#secondInput {
   margin-bottom: 66px;
+}
+
+.formError {
+  color: red;
 }
 
 @media (max-width: 1400px) {
