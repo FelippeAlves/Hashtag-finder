@@ -60,7 +60,7 @@ export default class About extends Component {
                     <div className="peopleContainer"> 
 
                         { this.state.isLoaded ? this.state.squadInfo.map((item) =>                         
-                                                            <PersonCard personImage={item.fields.Imagem[0].url} personName={this.state.squadInfo[0].fields.Nome}
+                                                            <PersonCard personImage={item.fields.Imagem[0].url} personName={item.fields.Nome}
                                                             personEmail={item.fields.Email}
                                                             personLinkedin={item.fields.LinkedIn}
                                                             personGithub={item.fields.Github}
