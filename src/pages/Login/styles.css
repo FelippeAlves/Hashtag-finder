@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  padding-bottom: 3px;
 }
 
 @media (max-width: 1000px) and (orientation: landscape) {

@@ -59,7 +59,7 @@
     background: url("../../assets/hero-bg-mobile.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    min-height: 100vh;
+    min-height: 91vh;
   }
 
   .titleContainer {
@@ -79,7 +79,7 @@
     background: url("../../assets/hero-bg-mobile.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    min-height: 100vh;
+    min-height: 85vh;
   }
 
   .titleContainer {
