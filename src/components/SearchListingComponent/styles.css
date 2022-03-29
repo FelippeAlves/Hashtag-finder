@@ -53,3 +53,19 @@ td {
 .table {
   padding-bottom: 30px;
 }
+
+ul {
+  text-align: center;
+}
+
+.pageButtons {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  margin: 0 5px;
+  color: #3633f7;
+  font-size: 16px;
+  font-family: "Rubik";
+  font-weight: 700;
+}
