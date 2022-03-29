@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Hashtag-finder/static/css/main.2154860c.css",
-    "main.js": "/Hashtag-finder/static/js/main.a5d18a26.js",
+    "main.js": "/Hashtag-finder/static/js/main.a072a4a7.js",
     "static/media/hero-bg.jpg": "/Hashtag-finder/static/media/hero-bg.bb884368f088f73ec617.jpg",
     "static/media/login-bg.jpg": "/Hashtag-finder/static/media/login-bg.f2411a575614d48f2c00.jpg",
     "static/media/about-bg.jpg": "/Hashtag-finder/static/media/about-bg.27d21cb16cc30bf98cae.jpg",
@@ -16,10 +16,10 @@
     "static/media/icon-power-off.svg": "/Hashtag-finder/static/media/icon-power-off.82d053be5fde578d148deb506cffe4eb.svg",
     "static/media/icon-user-alt.svg": "/Hashtag-finder/static/media/icon-user-alt.525f1ff18ffe31aca4fdf0c343a0ff58.svg",
     "main.2154860c.css.map": "/Hashtag-finder/static/css/main.2154860c.css.map",
-    "main.a5d18a26.js.map": "/Hashtag-finder/static/js/main.a5d18a26.js.map"
+    "main.a072a4a7.js.map": "/Hashtag-finder/static/js/main.a072a4a7.js.map"
   },
   "entrypoints": [
     "static/css/main.2154860c.css",
-    "static/js/main.a5d18a26.js"
+    "static/js/main.a072a4a7.js"
   ]
 }
