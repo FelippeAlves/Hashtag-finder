@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import './styles.css';
 import HeaderButtons from "../HeaderButtons";
-import Pagination from "./../PaginationComponent/index"
 
 
 function SearchListingComponent() {
+    
+    
     const [dataLocal, setDataLocal] = useState([
         {"fields": {
             "Squad": "z01",
@@ -15,23 +16,36 @@ function SearchListingComponent() {
 
     const [totalData, setTotalData] = useState()
 
-    async function getSearchs() {
-        await fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?filterByFormula="+encodeURI("({Squad} = 'z01')")+"&maxRecords=100&view=Grid%20view&squad=recScutTnMQeHuKFs", {
-            headers: {
-                Authorization: 'Bearer key2CwkHb0CKumjuM'
-            }
-        }).then(res => res.json());
-    }
-
     useEffect (() => {
-        getSearchs().then(response => {
-            setDataLocal(response.records)
-            setTotalData(response.records.length)
-            console.log(response)
-        });
-    }, [])
+        async function getSearchs() {
+            const result = await fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?filterByFormula="+encodeURI("({Squad} = 'z01')")+"&maxRecords=100&view=Grid%20view&squad=recScutTnMQeHuKFs", {
+                headers: {
+                    Authorization: 'Bearer key2CwkHb0CKumjuM'
+                }
+            }).then(res => res.json())
+            .then(response => 
+                response
+            );
 
-    const item = dataLocal.map((item) => {
+            setDataLocal(result.records)
+            setTotalData(result.records.length)
+            setPages(Math.ceil(result.records.length / 10))
+            
+        }
+
+        getSearchs()
+    })
+
+    
+
+    
+    const [currentPage, setCurrentPage] = useState(0)
+    const startIndex = currentPage * 10;
+    const endIndex = startIndex + 10;
+    const [pages, setPages] = useState(10)
+    const currentItens = dataLocal.slice(startIndex, endIndex)
+
+    const item = currentItens.map((item) => {
         let correctDate = JSON.stringify(item.fields.Data).slice(0,2) +'/'+ JSON.stringify(item.fields.Data).slice(2,4);
         let correctHour = JSON.stringify(item.fields.Data).slice(8,10) +':'+ JSON.stringify(item.fields.Data).slice(10,12);
 
@@ -58,44 +72,12 @@ function SearchListingComponent() {
                     <tbody>
                         {item}
                     </tbody>
-                    {/* <tbody>
-                        <tr>
-                            <td>Álekiss</td>
-                            <td>12/2022</td>
-                            <td>20:58</td>
-                        </tr>
-                        <tr>
-                            <td>Álekiss</td>
-                            <td>12/2022</td>
-                            <td>20:58</td>
-                        </tr>
-                        <tr>
-                            <td>Álekiss</td>
-                            <td>12/2022</td>
-                            <td>20:58</td>
-                        </tr>
-                        <tr>
-                            <td>Álekiss</td>
-                            <td>12/2022</td>
-                            <td>20:58</td>
-                        </tr>
-                        <tr>
-                            <td>Álekiss</td>
-                            <td>12/2022</td>
-                            <td>20:58</td>
-                        </tr>
-                        <tr>
-                            <td>Álekiss</td>
-                            <td>12/2022</td>
-                            <td>20:58</td>
-                        </tr>
-                    </tbody> */}
-                    <tfoot>
-                        
-                    </tfoot>
                 </table> 
-
-                <Pagination/>
+                <ul>
+                    <li>{Array.from(Array(pages), (item, index) => {
+                        return <button className="pageButtons" value={index} onClick={(e) => setCurrentPage(Number(e.target.value))}>{index +1}</button>
+                    })}</li>
+                </ul>
             </div>
         </div>
     </>
