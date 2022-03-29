@@ -26,8 +26,6 @@ function SearchListingComponent() {
         });
     }, [])
 
-    console.log(dataLocal.fields)
-
     const item = dataLocal.map((item) => {
         let correctDate = JSON.stringify(item.fields.Data).slice(0,2) +'/'+ JSON.stringify(item.fields.Data).slice(2,4);
         let correctHour = JSON.stringify(item.fields.Data).slice(8,10) +':'+ JSON.stringify(item.fields.Data).slice(10,12);

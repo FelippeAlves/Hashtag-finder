@@ -14,7 +14,6 @@ export default class About extends Component {
 
     async componentDidMount() {
         const api = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?fields%5B%5D=Sobre&filterByFormula=`+encodeURI(`{Squad} = 'Z01'`);
-        console.log(api);
         const response = await fetch(api, {
             method: 'GET',
             headers: {

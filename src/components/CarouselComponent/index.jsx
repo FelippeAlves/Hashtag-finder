@@ -6,17 +6,7 @@ import Carousel from 'react-elastic-carousel';
 function CarouselComponent({props}) {   
 
     const [state, setState] = useState([])
-
-    /* const card = props.images.map((images) => 
-        <div className="card" style={{backgroundImage: `url(${images.url ? images.url : images.preview_image_url})`}}>
-             <div className="content">
-                <p id="postTitle"></p>
-                <div className="username">
-                    <p id="userPost"></p> 
-                </div> 
-            </div>
-        </div>
-    ) */
+    
     const card = state.map((images) => 
         <div className="card" style={{backgroundImage: `url(${images.url ? images.url : images.preview_image_url})`}}>
              <div className="content">
