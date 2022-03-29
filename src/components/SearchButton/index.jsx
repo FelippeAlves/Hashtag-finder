@@ -18,6 +18,7 @@ function SearchButton() {
     const [data, setData] = useState([]);
     const [invalidField, setInvalidField] = useState(false);
     const [currentTime, setCurrentTime] = useState();
+    const [invalidTweet, setInvalidTweet] = useState(false);
     
     useEffect( () => {
         fetchPost(word)
@@ -32,8 +33,13 @@ function SearchButton() {
 
     async function fetchPost (word) {
         await searchTweets(word).then(data => {
-            setText(data.data)
-            setUsers(data.includes.users)
+            if(data.data !== undefined) {
+                setInvalidTweet(false)
+                setText(data.data)
+                setUsers(data.includes.users)
+            } else {
+                setInvalidTweet(true)
+            }
         }); 
 
         await searchImages(word).then(images => {
@@ -50,7 +56,6 @@ function SearchButton() {
             } else {
                 handleSearch(event.target.value)
                 setInvalidField(false)
-                
             }
         }
     }
@@ -90,22 +95,9 @@ function SearchButton() {
         }) 
     }
 
-/*     const teste = JSON.stringify({
-        records:JSON.stringify({
-                fields: {
-                    Squad: 'z01',
-                    Hashtag: 'param',
-                    Data: 1414124124124,
-                }
-            })
-            
-        })
-
-    console.log(teste) */
-
     return <>
         <div className='searchContainer'>
-            <div className={invalidField? 'buttonSearch alert' : 'buttonSearch'} id="search">
+            <div className={invalidField || invalidTweet ? 'buttonSearch alert' : 'buttonSearch'} id="search">
                     <img className="iconSearch" src={iconSearch} alt="" />
                     <input className='inputSearch' maxLength="140" type="text" onKeyUp={onSearch} placeholder="Buscar..." />
             </div>
@@ -113,7 +105,7 @@ function SearchButton() {
             <div className="invalidField" style={{display: `${invalidField ? 'flex' : 'none'}`}}>
                 <p>É obrigatório preecher o campo de busca</p>
             </div>
-        <h1 className="titleCarousel"> Exibindo os 10 resultados mais recentes para #{word} </h1>
+        <h1 className="titleCarousel"> {invalidTweet ? `Não existe resultados com a #${word}` : `Exibindo os 10 resultados mais recentes para #${word}`} </h1>
         <CarouselComponent props={{ images, author, data }} />
         <PostComponent props={{word, text, users}} />
     </>

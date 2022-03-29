@@ -24,13 +24,6 @@ function PostComponent({props}) {
                         </div>
                     </div>
     )
-        
-    
-    
-
-   
-    
-    
     
     return <>
         <div className="mainContainer">
