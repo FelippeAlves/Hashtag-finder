@@ -45,12 +45,12 @@ function HeaderButtons() {
         </Link>
         <nav className={`${showLoginBtn && "btnContainer"}`}>
           <Link
-            to={isAuthenticate || !showLoginBtn ? "/" : "/sobre"}
+            to={isAuthenticate || !showLoginBtn ? "/search-listing" : "/sobre"}
             className="btnAbout"
           >
             <img className="icons" src={iconAbout} alt="" />
             <p className="btnLetter">
-              {isAuthenticate || !showLoginBtn ? "HOME" : "SOBRE"}
+              {isAuthenticate || !showLoginBtn ? "BUSCAS" : "SOBRE"}
             </p>
           </Link>
           {showLoginBtn && (
