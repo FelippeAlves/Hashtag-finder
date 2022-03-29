@@ -3,6 +3,11 @@ import './styles.css';
 
 function PostComponent({props}) {
 
+    console.log(props)
+
+    /* if(props.users !== undefined || props.text !== undefined) {
+
+    } */
     const post = props.users.map((user, index) => 
                     <div className="cardContainer">
                         <div className="imageContainer">
@@ -24,13 +29,6 @@ function PostComponent({props}) {
                         </div>
                     </div>
     )
-        
-    
-    
-
-   
-    
-    
     
     return <>
         <div className="mainContainer">

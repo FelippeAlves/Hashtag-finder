@@ -57,7 +57,7 @@ function CarouselComponent({props}) {
     }
 
     useEffect(() => {
-        if(props.data.length) {
+        if(props.data !== undefined) {
             let array = handlingData()
             setState(array); 
         }
