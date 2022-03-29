@@ -14,8 +14,6 @@ function SearchListingComponent() {
         }}
     ])
 
-    const [totalData, setTotalData] = useState()
-
     useEffect (() => {
         async function getSearchs() {
             const result = await fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?filterByFormula="+encodeURI("({Squad} = 'z01')")+"&maxRecords=100&view=Grid%20view&squad=recScutTnMQeHuKFs", {
@@ -28,9 +26,7 @@ function SearchListingComponent() {
             );
 
             setDataLocal(result.records)
-            setTotalData(result.records.length)
-            setPages(Math.ceil(result.records.length / 10))
-            
+            setPages(Math.ceil(result.records.length / 10))         
         }
 
         getSearchs()
