@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './styles.css';
 import HeaderButtons from "../HeaderButtons";
+import Pagination from "./../PaginationComponent/index"
 
 
 function SearchListingComponent() {
@@ -12,8 +13,10 @@ function SearchListingComponent() {
         }}
     ])
 
+    const [totalData, setTotalData] = useState()
+
     async function getSearchs() {
-        return await fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?filterByFormula="+encodeURI("({Squad} = 'z01')")+"&maxRecords=100&view=Grid%20view&squad=recScutTnMQeHuKFs", {
+        await fetch("https://api.airtable.com/v0/app6wQWfM6eJngkD4/Buscas?filterByFormula="+encodeURI("({Squad} = 'z01')")+"&maxRecords=100&view=Grid%20view&squad=recScutTnMQeHuKFs", {
             headers: {
                 Authorization: 'Bearer key2CwkHb0CKumjuM'
             }
@@ -23,6 +26,8 @@ function SearchListingComponent() {
     useEffect (() => {
         getSearchs().then(response => {
             setDataLocal(response.records)
+            setTotalData(response.records.length)
+            console.log(response)
         });
     }, [])
 
@@ -53,7 +58,44 @@ function SearchListingComponent() {
                     <tbody>
                         {item}
                     </tbody>
+                    {/* <tbody>
+                        <tr>
+                            <td>Álekiss</td>
+                            <td>12/2022</td>
+                            <td>20:58</td>
+                        </tr>
+                        <tr>
+                            <td>Álekiss</td>
+                            <td>12/2022</td>
+                            <td>20:58</td>
+                        </tr>
+                        <tr>
+                            <td>Álekiss</td>
+                            <td>12/2022</td>
+                            <td>20:58</td>
+                        </tr>
+                        <tr>
+                            <td>Álekiss</td>
+                            <td>12/2022</td>
+                            <td>20:58</td>
+                        </tr>
+                        <tr>
+                            <td>Álekiss</td>
+                            <td>12/2022</td>
+                            <td>20:58</td>
+                        </tr>
+                        <tr>
+                            <td>Álekiss</td>
+                            <td>12/2022</td>
+                            <td>20:58</td>
+                        </tr>
+                    </tbody> */}
+                    <tfoot>
+                        
+                    </tfoot>
                 </table> 
+
+                <Pagination/>
             </div>
         </div>
     </>
