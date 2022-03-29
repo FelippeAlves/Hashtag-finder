@@ -23,8 +23,6 @@ const LoginModal = () => {
       },
     }).then((res) => res.json());
 
-    console.log(formData);
-
     const emailValidate = response.records[0].fields.Email === formData.email;
     const passValidate = response.records[0].fields.Senha === formData.password;
 

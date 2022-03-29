@@ -34,13 +34,11 @@ function SearchButton() {
     async function fetchPost (word) {
         await searchTweets(word).then(data => {
             if(data.data !== undefined) {
-                console.log('entrou aqui')
                 setInvalidTweet(false)
                 setText(data.data)
                 setUsers(data.includes.users)
             } else {
                 setInvalidTweet(true)
-                console.log('não existe tweets')
             }
         }); 
 
