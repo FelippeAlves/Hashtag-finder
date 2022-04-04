@@ -13,25 +13,31 @@ export default class About extends Component {
     }
 
     async componentDidMount() {
-        const api = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?fields%5B%5D=Sobre&filterByFormula=`+encodeURI(`{Squad} = 'Z01'`);
-        const response = await fetch(api, {
-            method: 'GET',
-            headers: {
-                Authorization: 'Bearer key2CwkHb0CKumjuM',
-                'Content-Type': 'application/json'
-            }});
-        const body = await response.json();
-        this.setState({about: body.records[0].fields.Sobre})
-
-        const apiSquad = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?&filterByFormula=`+encodeURI(`{Squad} = 'Z01'`);
-        const responseSquad = await fetch(apiSquad, {
-            method: 'GET',
-            headers: {
-                Authorization: 'Bearer key2CwkHb0CKumjuM',
-                'Content-Type': 'application/json'
-            }});
-        const bodySquad = await responseSquad.json();
-        this.setState({squadInfo: bodySquad.records, isLoaded: true});
+        try {
+            const api = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Projeto?fields%5B%5D=Sobre&filterByFormula=`+encodeURI(`{Squad} = 'Z01'`);
+            const response = await fetch(api, {
+                method: 'GET',
+                headers: {
+                    Authorization: 'Bearer key2CwkHb0CKumjuM',
+                    'Content-Type': 'application/json'
+                }});
+            const body = await response.json();
+            this.setState({about: body.records[0].fields.Sobre})
+    
+            const apiSquad = `https://api.airtable.com/v0/app6wQWfM6eJngkD4/Equipe?&filterByFormula=`+encodeURI(`{Squad} = 'Z01'`);
+            const responseSquad = await fetch(apiSquad, {
+                method: 'GET',
+                headers: {
+                    Authorization: 'Bearer key2CwkHb0CKumjuM',
+                    'Content-Type': 'application/json'
+                }});
+            const bodySquad = await responseSquad.json();
+            this.setState({squadInfo: bodySquad.records, isLoaded: true});
+        } 
+        catch {
+            alert('Erro no carregamento os dados!')
+            this.setState({about: "Erro no carregamento dos dados", isLoaded: true})
+        }
     }
 
     render() {

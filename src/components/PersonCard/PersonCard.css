@@ -1,7 +1,6 @@
 .personInfoContainer {
   display: flex;
   flex-direction: column;
-  width: 200px;
   align-items: center;
   box-shadow: 0px 5px 10px #5538ee14;
   border: 1px solid #5538ee24;
@@ -32,6 +31,20 @@
   text-align: center;
 }
 
+@media (max-width: 1024px) and (min-width: 612px) {
+  .personInfoContainer {
+    width: 200px;
+  }
+
+  .personDescriptionText {
+    font-size: 1.25rem;
+  }
+
+  .socialMediaImage {
+    height: 24px;
+  }
+}
+
 @media (max-width: 611px) {
   .personInfoContainer {
     height: 260px;
@@ -39,5 +52,13 @@
 
   .personInfoImage {
     height: 100px;
+  }
+
+  .personDescriptionText {
+    font-size: 1.25rem;
+  }
+
+  .socialMediaImage {
+    height: 24px;
   }
 }
