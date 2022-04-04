@@ -13,13 +13,13 @@ export default class PersonCard extends Component {
                 <p className="personDescriptionText">{this.props.personDescription}</p>
                 <div className="socialMediaContainer">
 
-                    <a href={this.props.personGithub}>
+                    <a href={this.props.personGithub} target="_blank" rel="noreferrer">
                         <img className="socialMediaImage" src={iconGithub} alt="Access Github"/>
                     </a>
-                    <a href={`mailto:${this.props.personEmail}`}>
+                    <a href={`mailto:${this.props.personEmail}`} target="_blank" rel="noreferrer">
                         <img className="socialMediaImage" src={iconEnvelope} alt="Send Email"/>
                     </a>
-                    <a href={this.props.personLinkedin}>
+                    <a href={this.props.personLinkedin} target="_blank" rel="noreferrer">
                         <img className="socialMediaImage" src={iconLinkedin} alt="Access Linkedin"/>
                     </a>
                 </div>

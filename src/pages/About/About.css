@@ -15,11 +15,12 @@ body {
 .projectHeaderContainer {
   background-image: url("../../../public/about-bg.jpg");
   height: 100%;
+  background-size: cover;
 }
 
 .aboutProjectText {
-  margin-top: 5%;
-  margin-left: 5%;
+  margin-top: 24px;
+  margin-left: 64px;
   color: #ffffff;
   font: normal normal bold 82px/90px Rubik;
   letter-spacing: 0px;
@@ -164,12 +165,16 @@ body {
   }
 
   .aboutProjectText {
-    margin-top: 5%;
+    margin-top: 0px;
     margin-left: 5%;
     color: #ffffff;
     font: normal normal bold 82px/90px Rubik;
     letter-spacing: 0px;
     font-size: 36px;
     text-align: center;
+  }
+
+  .personInfoContainer {
+    width: 80vw;
   }
 }
