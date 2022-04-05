@@ -88,6 +88,22 @@ a {
     width: 240px;
   }
 }
+@media (max-width: 430px) {
+  .btnLetter {
+    margin-left: 10px;
+    font: normal normal bold 9px Rubik;
+    letter-spacing: 2px;
+  }
+
+  .btnAbout, .btnLogin{
+    width: 95px;
+    height: 25px;
+  }
+
+  .btnContainer {
+    width: 210px;
+  }
+}
 
 @media (max-width: 320px) {
   .btnContainer {
