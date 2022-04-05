@@ -6,7 +6,8 @@
 .headerContainer {
   background: url("../../assets/hero-bg.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position-x: right;
   background-position-y: -13vh;
 }
 
@@ -54,12 +55,12 @@
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 510px) {
   .headerContainer {
     background: url("../../assets/hero-bg-mobile.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    min-height: 91vh;
+    min-height: 72vh;
   }
 
   .titleContainer {
@@ -71,6 +72,23 @@
   .subTitleContainer {
     font: normal normal normal 18px/25px Rubik;
     width: 81vw;
+  }
+}
+
+@media (max-width: 465px) {
+  .titleContainer {
+    font: normal normal normal 18px/39px Rubik;
+    width: 90vw;
+    margin: 5vh 0 2vh 5.6vw;
+  }
+
+  .subTitleContainer {
+    font: normal normal normal 16px/22px Rubik;
+    width: 80vw;
+  }
+
+  .headerContainer {
+    min-height: 60vh;
   }
 }
 

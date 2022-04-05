@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import './styles.css';
 import Carousel from 'react-elastic-carousel';
+import { HashLoader } from "react-spinners";
 
 
 function CarouselComponent({props}) {   
 
-    const [state, setState] = useState([])
+    const [state, setState] = useState([]);
+    const [modalImg, setModalImg] = useState();
+    const [activeModal, setActiveModal] = useState(false);
+    const [loarder, setLoader] = useState(false);
     
-    const card = state.map((images) => 
-        <div className="card" style={{backgroundImage: `url(${images.url ? images.url : images.preview_image_url})`}}>
+    const card = state.map((images, index) => 
+        <div className="card" key={index} onClick={(e) => handleClick(e.target.style.backgroundImage.replace('url("', ''))} style={{backgroundImage: `url(${images.url ? images.url : images.preview_image_url})`}}>
              <div className="content">
                 <p id="postTitle">{images.name}</p>
                 <div className="username">
@@ -51,7 +55,7 @@ function CarouselComponent({props}) {
             let array = handlingData()
             setState(array); 
         }
-    },[props])
+    },[])
 
     const breakPoints = [
         {
@@ -64,9 +68,28 @@ function CarouselComponent({props}) {
            width: 768, itemsToShow: 3 
         },
         {
-           width: 1200, itemsToShow: 4 
+           width: 1200, itemsToShow: 5 
         },
     ]
+
+    function desactiveModal(event) {
+        let div = document.querySelectorAll('.modal');
+        let button = document.querySelectorAll('#buttonClose');
+        if(event === div[0] || event === button[0]) {
+            setActiveModal(false)
+            setLoader(false)
+        }
+    }
+
+    window.addEventListener('click', (e) => {desactiveModal(e.target)});
+
+    function handleClick(image) {
+        let newImage = image.replace('")', '')
+        setModalImg(newImage);
+        setActiveModal(true);
+        setTimeout(() => {setLoader(true);}, 500)
+         
+    }
 
     return <>
         
@@ -74,6 +97,30 @@ function CarouselComponent({props}) {
             <Carousel breakPoints={breakPoints}>
                 {card}
             </Carousel>
+            { activeModal ? 
+
+                <div className="modal">
+                    {
+                        loarder ? 
+
+                        <div className="modalContent">
+                            <img className="modalContainer" src={modalImg} alt="imagem do twitter"/>
+                        </div>
+
+                        : 
+                        
+                        <div className="loaderContainer">
+                            <HashLoader color="#6A36D7" />
+                        </div>
+                    }
+                    <span id="buttonClose">&times;</span>
+                </div>
+               
+            
+
+            : ''
+            
+            }
         </div>
        
     </>

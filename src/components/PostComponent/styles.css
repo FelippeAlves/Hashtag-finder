@@ -31,11 +31,14 @@
   display: flex;
   margin-bottom: 0.4vh;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .comment {
   margin-bottom: 3vh;
   font: normal normal normal 15px/25px Rubik;
+  word-break: break-word;
+  max-width: 90%;
 }
 
 .buttonSeeMore {

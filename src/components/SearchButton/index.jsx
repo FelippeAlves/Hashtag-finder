@@ -6,6 +6,7 @@ import CarouselComponent from "../CarouselComponent"
 import PostComponent from "../PostComponent"
 import searchTweets from '../../service/searchTweets'
 import searchImages from '../../service/searchImages'
+import HashLoader from "react-spinners/HashLoader";
 
 
 function SearchButton() {
@@ -19,13 +20,18 @@ function SearchButton() {
     const [invalidField, setInvalidField] = useState(false);
     const [currentTime, setCurrentTime] = useState();
     const [invalidTweet, setInvalidTweet] = useState(false);
+    const [loading, setLoading] = useState(true);
     
     useEffect( () => {
         fetchPost(word)
         newDate();
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
     }, [word])
 
     async function handleSearch(word) {
+        setLoading(true);
         const correctWord = word.replace('#', '')
         await setWord(correctWord)
         postSearch(correctWord, currentTime);
@@ -102,12 +108,30 @@ function SearchButton() {
                     <input className='inputSearch' maxLength="140" type="text" onKeyUp={onSearch} placeholder="Buscar..." />
             </div>
         </div>
-            <div className="invalidField" style={{display: `${invalidField ? 'flex' : 'none'}`}}>
-                <p>É obrigatório preecher o campo de busca</p>
+        <div className="invalidField" style={{display: `${invalidField ? 'flex' : 'none'}`}}>
+            <p>É obrigatório preecher o campo de busca</p>
+        </div>
+        
+        {
+            loading ? 
+            <div className="loaderContainer">
+                    <HashLoader color="#6A36D7" />
             </div>
-        <h1 className="titleCarousel"> {invalidTweet ? `Não existe resultados com a #${word}` : `Exibindo os 10 resultados mais recentes para #${word}`} </h1>
-        <CarouselComponent props={{ images, author, data }} />
-        <PostComponent props={{word, text, users}} />
+            :
+            <>
+                {
+                    invalidTweet ? 
+                        <h1 className="invalidTweet"> {`Não existe resultados com a #${word}`} </h1>  
+                    :
+                    <>
+                        <h1 className="titleCarousel"> {`Exibindo os 10 resultados mais recentes para #${word}`} </h1>
+                        <CarouselComponent props={{ images, author, data }} />
+                        <PostComponent props={{word, text, users}} />
+                    </>
+                }
+            </>
+                
+        }
     </>
 }
 
