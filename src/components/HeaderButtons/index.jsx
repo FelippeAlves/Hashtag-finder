@@ -25,14 +25,35 @@ function HeaderButtons() {
 
   const [active, setActive] = useState(false);
 
+  console.log()
+
   const verify = () => {
     const scroll = window.scrollY;
     const height = window.innerHeight;
-    if (scroll > height / 1.55) {
-      setActive(true);
-    } else {
-      setActive(false);
+    switch (location.pathname) {
+      case '/':
+        if (scroll > height / 1.55) {
+          setActive(true);
+        } else {
+          setActive(false);
+        }
+        break;
+      case '/login':
+        break;
+      case '/search-listing':
+        break;
+      case '/sobre':
+        console.log(scroll);
+        if (scroll > height / 3.46) {
+          setActive(true);
+        } else {
+          setActive(false);
+        }
+        break;
+      default:
+        break;
     }
+    
   };
 
   window.addEventListener("scroll", verify);
