@@ -4,7 +4,7 @@
   background-color: #fff;
   border-radius: 14px;
   padding: 130px 48px;
-  margin: 150px auto;
+  margin: 10% auto;
   box-sizing: border-box;
 }
 
@@ -35,6 +35,17 @@
 
 .btnSubmit:hover {
   background-color: #2d2ada;
+}
+
+#msgLogin {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #E6192F;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
 }
 
 .inputLogin {
@@ -72,18 +83,12 @@
   color: red;
 }
 
-@media (max-width: 1400px) {
-  .containerLogin {
-    margin-top: 30px;
-  }
-}
-
 @media (max-width: 600px) {
   .containerLogin {
-    margin-top: 150px;
+    margin-top: 30%;
     justify-content: flex-end;
-    max-width: 340px;
+    max-width: 80%;
     height: 460px;
-    padding: 60px 32px;
+    padding: 60px 32px;    
   }
 }
