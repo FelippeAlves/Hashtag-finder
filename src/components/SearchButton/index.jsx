@@ -66,19 +66,10 @@ function SearchButton() {
         }
     }
 
-    async function newDate() {
-        let dateDay = new Date().getDate();
-        let dateMonth = new Date().getMonth()+1;
-        let dateYear = new Date().getFullYear();
-        let dateHour = new Date().getHours();
-        let dateMinutes = new Date().getMinutes();
-        if(dateHour.toString().length < 2){
-            dateHour = '0'+dateHour;
-        }
-        if(dateMinutes.toString().length < 2){
-            dateHour = '0'+dateMinutes;
-        }
-        const dateNow = parseInt(dateDay.toString() + '0' + dateMonth.toString() +dateYear.toString() +dateHour.toString() +dateMinutes.toString());
+    async function newDate() {        
+        let dateNow = new Date();
+        dateNow = dateNow.getTime();
+        
         setCurrentTime(dateNow);
     }
 
