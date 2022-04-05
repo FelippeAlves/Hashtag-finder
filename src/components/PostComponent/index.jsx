@@ -19,7 +19,7 @@ function PostComponent({props}) {
                                     </p>
                                 </div>
                                 <div >
-                                    <button className="buttonSeeMore">Ver mais no Twitter</button>
+                                    <a href={`https://twitter.com/${props.text[index].author_id}/status/${props.text[index].id}`} target="_blank" className="buttonSeeMore" rel="noreferrer">Ver mais no Twitter</a>
                                 </div>
                         </div>
                     </div>

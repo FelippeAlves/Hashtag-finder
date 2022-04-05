@@ -1,3 +1,19 @@
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  margin: 15vh 0;
+}
+
+.invalidTweet {
+  display: flex;
+  justify-content: center;
+  font: normal normal bold 32px/35px Rubik;
+  margin: 10vh 0 10vh 0;
+  color: #3634f7;
+  text-align: center;
+  width: 100%;
+}
+
 .searchContainer {
   display: flex;
   justify-content: center;
@@ -82,11 +98,11 @@ input::placeholder {
   }
 }
 
-@media (max-width: 488px) {
+@media (max-width: 510px) {
   .buttonSearch {
     width: 85vw;
     height: 54px;
-    margin-top: -28vh;
+    margin-top: -20vh;
   }
 
   .inputSearch {
@@ -109,7 +125,7 @@ input::placeholder {
   .buttonSearch {
     width: 85vw;
     height: 40px;
-    margin-top: -30vh;
+    margin-top: -25vh;
   }
 
   input::placeholder {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { Formik } from "formik";
@@ -8,8 +8,9 @@ import "./styles.css";
 
 const LoginModal = () => {
   const navigate = useNavigate();
+  const [loginAuth, setLoginAuth] = useState(false);
 
-  const { setIsAuthenticate } = useAuth();
+  const { setIsAuthenticate, isAuthenticate } = useAuth();
 
   const handleOnSubmit = async (formData) => {
     const api =
@@ -27,16 +28,25 @@ const LoginModal = () => {
     const passValidate = response.records[0].fields.Senha === formData.password;
 
     if (emailValidate && passValidate) {
+      setLoginAuth(false);
       setIsAuthenticate(true);
       navigate("/search-listing");
+    } else {
+      setLoginAuth(true);
     }
   };
 
+  useEffect(() => {
+    if (isAuthenticate) {
+      navigate("/");
+    }
+  }, []);
+
   return (
     <>
+      {loginAuth && <span id="msgLogin">Email e Senha incorretos! 😕</span>}
       <div className="containerLogin">
         <h1 className="loginTitle">Login</h1>
-
         <Formik
           initialValues={{
             email: "",
@@ -58,7 +68,6 @@ const LoginModal = () => {
               touched,
               errors,
               handleChange,
-              handleBlur,
               handleSubmit,
             } = props;
             return (
@@ -66,7 +75,6 @@ const LoginModal = () => {
                 <div id="firstInput">
                   <input
                     onChange={handleChange}
-                    onBlur={handleBlur}
                     value={values.email}
                     type="text"
                     name="email"
@@ -82,7 +90,6 @@ const LoginModal = () => {
                   <input
                     onChange={handleChange}
                     className="inputLogin"
-                    onBlur={handleBlur}
                     value={values.password}
                     type="password"
                     name="password"
