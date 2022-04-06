@@ -38,6 +38,8 @@ th {
 
 .td1 {
   color: #292929;
+  width: 60%;
+  line-height: 30px;
 }
 
 td {
@@ -51,7 +53,7 @@ td {
 }
 
 .table {
-  padding-bottom: 30px;
+  padding-bottom: 55px;
 }
 
 ul {
@@ -68,4 +70,64 @@ ul {
   font-size: 16px;
   font-family: "Rubik";
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    margin-left: 5%;
+  }
+
+  table {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  thead {
+    line-height: 65px;
+  }
+
+  tbody {
+    line-height: 55px;
+  }
+}
+
+@media screen and (max-width: 576px){
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  table {
+    margin-left: 1.5%;
+    width: 97%;
+  }
+
+  thead {
+    line-height: 55px;
+  }
+  
+  tbody {
+    line-height: 45px;
+  }
+
+  th {
+    font-size: 1.063rem;
+  }
+
+  tr{
+    font-size: 0.875rem;
+  } 
+
+  .td1 {
+    line-height: 20px;
+  }
+
+  .pageButtons {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
 }
