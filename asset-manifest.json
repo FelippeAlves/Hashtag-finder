@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Hashtag-finder/static/css/main.63099f4a.css",
-    "main.js": "/Hashtag-finder/static/js/main.a0ec7ea2.js",
+    "main.css": "/Hashtag-finder/static/css/main.1aa993e3.css",
+    "main.js": "/Hashtag-finder/static/js/main.dc2ca6ef.js",
     "static/media/hero-bg.jpg": "/Hashtag-finder/static/media/hero-bg.bb884368f088f73ec617.jpg",
     "static/media/login-bg.jpg": "/Hashtag-finder/static/media/login-bg.f2411a575614d48f2c00.jpg",
     "static/media/about-bg.jpg": "/Hashtag-finder/static/media/about-bg.27d21cb16cc30bf98cae.jpg",
@@ -16,11 +16,11 @@
     "static/media/icon-info-circle.svg": "/Hashtag-finder/static/media/icon-info-circle.04710de8deaa23644f205effc16f384a.svg",
     "static/media/icon-power-off.svg": "/Hashtag-finder/static/media/icon-power-off.82d053be5fde578d148deb506cffe4eb.svg",
     "static/media/icon-user-alt.svg": "/Hashtag-finder/static/media/icon-user-alt.525f1ff18ffe31aca4fdf0c343a0ff58.svg",
-    "main.63099f4a.css.map": "/Hashtag-finder/static/css/main.63099f4a.css.map",
-    "main.a0ec7ea2.js.map": "/Hashtag-finder/static/js/main.a0ec7ea2.js.map"
+    "main.1aa993e3.css.map": "/Hashtag-finder/static/css/main.1aa993e3.css.map",
+    "main.dc2ca6ef.js.map": "/Hashtag-finder/static/js/main.dc2ca6ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.63099f4a.css",
-    "static/js/main.a0ec7ea2.js"
+    "static/css/main.1aa993e3.css",
+    "static/js/main.dc2ca6ef.js"
   ]
 }
