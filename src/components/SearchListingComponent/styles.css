@@ -60,6 +60,12 @@ ul {
   text-align: center;
 }
 
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  margin: 15vh 0;
+}
+
 .pageButtons {
   width: 30px;
   height: 30px;
