@@ -42,6 +42,13 @@ Conforme cronograma, os objetivos serão segregados por nível de importância, 
 - [Versão estática] Sobre o projeto
 - [Versão estática] Login
 
+### Front-end 05/04:
+
+- [Versão completa] Topo, rodapé e área para busca
+- [Versão completa] Lista de imagens e posts dos resultados
+- [Versão completa] Sobre o projeto
+- [Versão completa] Login
+
 ## Rodando o Projeto
 
 ### Pré-requisitos:
